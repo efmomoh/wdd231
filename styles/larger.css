@@ -1,0 +1,86 @@
+/* // larger CSS file for wider view devices  */
+
+
+@media only screen and (min-width: 600px) {
+    :root {
+        --bg-color1: #ffffff;
+    }
+
+    header,
+    .navigation,
+    main,
+    footer {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    body {
+        background-color: var(--bg-color1);
+    }
+
+    header {
+        grid-template-columns: 24px auto;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+        padding-top: 5px;
+    }
+
+    .navigation ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navigation ul li {
+        padding: 15px 0 5px 10px;
+    }
+
+    .navigation ul li a {
+        font-size: 1.3rem;
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: auto auto;
+
+    }
+
+
+    section .student img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    footer .course {
+        display: flex;
+        gap: 10px;
+        padding: 10px 0;
+        background-color: var(--bg-color1);
+
+    }
+
+    footer .course-code ul,
+    .course ul {
+        display: flex;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    footer .course-code ul li,
+    .course ul li {
+        padding: 10px 0;
+        width: 100%;
+
+
+    }
+
+
+}
