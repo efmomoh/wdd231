@@ -1,8 +1,8 @@
-// navBar 
-const menuButton = document.querySelector("#menu");
-const navBar = document.querySelector('#nav-bar');
+// JS navigation file 
+const menuBtn = document.querySelector('#menu');
+const navLinks = document.querySelector('#nav-bar');
 
-menuButton.addEventListener("click", () => {
-    menuButton.classList.toggle('show');
-    navBar.classList.toggle('show');
+menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle('show');
+    navLinks.classList.toggle('show');
 });
