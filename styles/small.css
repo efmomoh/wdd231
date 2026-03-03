@@ -133,7 +133,7 @@ main {
 section {
     display: grid;
     grid-template-columns: 1fr;
-    column-gap: 10px;
+    column-gap: 12px;
     justify-content: center;
 }
 
@@ -147,10 +147,9 @@ section .student img {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    /* max-width: 100%; */
     margin: 1rem 2rem;
     border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 100%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 100%);
     place-self: center;
 }
 
@@ -216,7 +215,7 @@ footer .course-code ul li,
 footer .course-code ul li a,
 .course ul li a {
     text-decoration: none;
-    color: #3D405B;
+    color: var(--text-color2);
     font-weight: bold;
     display: inline-block;
     width: 100%;
