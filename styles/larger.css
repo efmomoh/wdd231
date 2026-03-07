@@ -49,38 +49,26 @@
     section {
         display: grid;
         grid-template-columns: auto auto;
-
     }
-
 
     section .student img {
         width: 100%;
         height: auto;
     }
 
+    /* course card section  */
+    .card-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 12px;
+    }
 
-    footer .course {
+    .course-card {
         display: flex;
-        gap: 10px;
-        padding: 10px 0;
-        background-color: var(--bg-color1);
-
+        flex-direction: column;
     }
 
-    footer .course-code ul,
-    .course ul {
-        display: flex;
-        gap: 10px;
-        padding: 10px 0;
+    .categories button {
+        padding: 10px 70px;
     }
-
-    footer .course-code ul li,
-    .course ul li {
-        padding: 10px 0;
-        width: 100%;
-
-
-    }
-
-
 }
