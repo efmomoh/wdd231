@@ -4,94 +4,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Home | Taurus ProMax Global Network</title>
+
     <meta name="description"
-        content="This is Taurus ProMax Global NetWork home page that provides you with basic academic info.">
+        content="This is Taurus ProMax Global Network home page that provides you with basic academic info.">
+
     <meta name="author" content="Enssah Fayia Momoh">
 
-    <!-- styles -->
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="styles/normalize.css">
 
-
-    <!-- Google font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU+Guides&family=Roboto:ital@0;1&display=swap"
         rel="stylesheet">
 
-    <!-- scripts  -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/course.js" defer></script>
     <script src="scripts/footer.js" defer></script>
 
-
-
 </head>
 
 <body>
+
     <header>
-        <img src="images/home.svg" alt="Home Site Logo" width="50" height="50">
-        <span>Taurus ProMax Global Netwok</span>
+
+        <img src="images/home.svg" alt="Site Logo" width="50" height="50">
+
+        <span>Taurus ProMax Global Network</span>
+
         <button id="menu" class="menu" aria-label="menu button"></button>
+
     </header>
+
+
     <nav id="nav-bar" class="navigation">
+
         <ul>
-            <li class="current"><a href="">Home</a></li>
-            <li><a href="#">Home</a></li>
+            <li class="current"><a href="#">Home</a></li>
             <li><a href="#">Chamber Project</a></li>
             <li><a href="#">Final Project</a></li>
         </ul>
-    </nav>
-    <main>
-        <h1>Home</h1>
-        <section>
-            <section class="about">
-                <div>
-                    <h2>About Me</h2>
-                    <p>Welcome! I am student Enssah Fayia Momoh form Liberia, West Africa currently living in Suzhou,
-                        China.
-                        I am student of BYU-Idaho studing Software Development.
-                        At present, I am doing Front-End Development I <strong>(WDD 231).</strong> Need business
-                        solution(s)?
-                        Don't hesitate to reach me out ASAP!</p>
-                </div>
-            </section>
-            <section class="student">
-                <div>
-                    <h3>Student Photo</h3>
-                    <div class="image">
-                        <img src="images/student-enssah.webp" alt="Student Enssah Photo">
 
-                    </div>
+    </nav>
+
+
+    <main>
+
+        <h1>Home</h1>
+
+        <!-- student information  -->
+
+        <section class="about-student">
+
+            <h2>Student Information</h2>
+
+            <div class="about">
+
+                <h3>About Me</h3>
+
+                <p>
+                    Welcome! I am student Enssah Fayia Momoh from Liberia, West Africa currently living in Suzhou,
+                    China. I am a student of BYU-Idaho studying Software Development. Currently I am taking
+                    <strong>Frontend Web Development I (WDD 231)</strong>.
+                </p>
+
+            </div>
+
+
+            <div class="student">
+
+                <h4>Student Photo</h4>
+
+                <div class="image">
+                    <img src="images/student-enssah.webp" alt="Student Enssah Photo" loading="lazy">
                 </div>
-            </section>
+
+            </div>
+
         </section>
+
+
+
+        <!-- COURSE CERTIFICATE -->
 
         <section class="card-container">
-            <h4>Web & Computer Programming Certificate</h4>
-            <section class="categories">
-                <button id="all">All Cources</button>
-                <button id="wdd">WDD Cources</button>
-                <button id="cse">CSE Courses</button>
-            </section>
 
-            <section class="card-list"></section>
+            <h5>Web & Computer Programming Certificate</h5>
+
+            <div class="categories">
+
+                <button id="all">All Courses</button>
+                <button id="wdd">WDD Courses</button>
+                <button id="cse">CSE Courses</button>
+
+            </div>
+
+            <div class="card-list"></div>
+
             <p id="credits"></p>
+
         </section>
+
     </main>
+
+
+
     <footer>
+
         <section class="social">
-            <a href="linkedin.com/in/efmomoh"><img src="images/linkedin.svg" alt="LinkedIn Icon"></a>
-            <a href="https://github.com/efmomoh"><img src="images/github.svg" alt="GitHub Icon"></a>
-            <a href="https://x.com/efmomoh"><img src="images/twitter-x.svg" alt="Twitter Icon"></a>
+
+            <a href="https://linkedin.com/in/efmomoh">
+                <img src="images/linkedin.svg" alt="LinkedIn Icon">
+            </a>
+
+            <a href="https://github.com/efmomoh">
+                <img src="images/github.svg" alt="GitHub Icon">
+            </a>
+
+            <a href="https://x.com/efmomoh">
+                <img src="images/twitter-x.svg" alt="Twitter Icon">
+            </a>
+
         </section>
+
+
         <section class="copyright">
-            <p><span id="currentyear"></span></p>
-            <p><span id="lastModified"></span></p>
+
+            <p>© <span id="currentyear"></span> | Taurus ProMax Global Network</p>
+
+            <p id="lastModified"></p>
+
         </section>
+
     </footer>
+
 </body>
 
 </html>

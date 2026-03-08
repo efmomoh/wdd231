@@ -1,6 +1,5 @@
-// foooter js
+const year = document.querySelector("#currentyear");
+const modified = document.querySelector("#lastModified");
 
-const currentYear = document.querySelector('#currentyear');
-currentYear.innerHTML = `@${new Date().getFullYear()}🌲Taurus ProMax Global Network - <em>LIBERIA</em> 🌐`;
-const lastDateModified = document.querySelector('#lastModified');
-lastDateModified.textContent = `LastModified: ${document.lastModified}`;
+year.textContent = new Date().getFullYear();
+modified.textContent = `Last Updated: ${document.lastModified}`;

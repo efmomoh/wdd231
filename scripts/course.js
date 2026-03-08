@@ -93,13 +93,13 @@ function displayCourses(courseList) {
     cardContainer.innerHTML = courseList.map(course => `
         <section class="course-card ${course.completed ? 'completed' : 'not-completed'}">
 
-        <h5>
-        ${course.subject} ${course.number}
-        ${course.completed ? "✅" : "❌"}
-        </h5>
+            <h6>
+            ${course.subject} ${course.number}
+            ${course.completed ? "✅" : "❌"}
+            </h6>
 
-        <p>${course.title}</p>
-        <p>Status: ${course.completed ? "Completed" : "Not Completed"}</p>
+            <p>${course.title}</p>
+            <p>Status: ${course.completed ? "Completed" : "Not Completed"}</p>
 
         </section>
         `).join("");

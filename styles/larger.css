@@ -1,27 +1,15 @@
-/* // larger CSS file for wider view devices  */
-
-
-@media only screen and (min-width: 600px) {
-    :root {
-        --bg-color1: #ffffff;
-    }
+/* LARGE VIEW  */
+@media (min-width:600px) {
 
     header,
     .navigation,
     main,
     footer {
-        width: 100%;
         max-width: 800px;
-        margin: 0 auto;
+        margin: auto;
     }
 
-    body {
-        background-color: var(--bg-color1);
-    }
-
-    header {
-        grid-template-columns: 24px auto;
-    }
+    /* desktop nav */
 
     .menu {
         display: none;
@@ -29,46 +17,47 @@
 
     .navigation {
         display: block;
-        padding-top: 5px;
     }
 
     .navigation ul {
         display: flex;
-        margin: 0;
-        padding: 0;
     }
 
-    .navigation ul li {
-        padding: 15px 0 5px 10px;
+    .navigation li {
+        flex: 1;
+        text-align: center;
     }
 
-    .navigation ul li a {
-        font-size: 1.3rem;
-    }
-
-    section {
+    /* about grid  */
+    .about-student {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
+        /* gap: 12px; */
     }
 
-    section .student img {
-        width: 100%;
-        height: auto;
+    .student {
+        grid-column: 2;
     }
 
-    /* course card section  */
+    .about-student h3 {
+        grid-column: 1 / -1;
+    }
+
+    .about {
+        grid-column: 1;
+    }
+
+    .about-student h2 {
+        grid-column: 1 / -1;
+    }
+
+    /* course grid  */
+
     .card-list {
-        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 12px;
-    }
-
-    .course-card {
-        display: flex;
-        flex-direction: column;
     }
 
     .categories button {
-        padding: 10px 70px;
+        padding: 10px 50px;
     }
 }
