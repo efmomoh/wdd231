@@ -156,12 +156,15 @@ section .about,
     background-color: var(--bg-color3);
 }
 
+section .student .image {
+    margin: 2rem;
+}
+
 section .student img {
     display: block;
-    width: 85%;
-    max-width: 90%;
+    width: 100%;
     height: auto;
-    margin: 2rem;
+    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 100%);
     place-self: center;
