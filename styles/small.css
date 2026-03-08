@@ -114,7 +114,8 @@ h4 {
     font-weight: bold;
 }
 
-h3, h4 {
+h3,
+h4 {
     font-size: 1.2rem;
 }
 
@@ -160,11 +161,6 @@ p {
     text-align: center;
 }
 
-.card-list {
-    text-align: start;
-    padding: 14px;
-}
-
 .categories {
     display: flex;
     justify-content: space-evenly;
@@ -194,6 +190,8 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 12px;
+    text-align: start;
+    padding: 14px;
 }
 
 .course-card {
