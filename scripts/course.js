@@ -93,10 +93,10 @@ function displayCourses(courseList) {
     cardContainer.innerHTML = courseList.map(course => `
         <section class="course-card ${course.completed ? 'completed' : 'not-completed'}">
 
-            <h6>
+            <h4>
             ${course.subject} ${course.number}
             ${course.completed ? "✅" : "❌"}
-            </h6>
+            </h4>
 
             <p>${course.title}</p>
             <p>Status: ${course.completed ? "Completed" : "Not Completed"}</p>
