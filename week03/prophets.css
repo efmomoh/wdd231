@@ -1,0 +1,108 @@
+/* prophet css  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, "Geneva", Tahoma, sans-serif;
+}
+
+header {
+    text-align: center;
+    box-shadow: 0 16px 10px rgba(0, 0, 0, .2);
+    padding: 1rem;
+    background-color: rgb(235, 235, 243);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(210, 210, 240);
+    margin: 0 auto;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: .5rem;
+    margin: 1rem;
+}
+
+.card {
+    border: 1px solid black;
+    padding: 1rem;
+    box-shadow: 0 4px 10px 10px rgb(212, 208, 208);
+}
+
+#cards div {
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-weight: bold;
+    color: blue;
+}
+
+p {
+    font-size: .8rem;
+    text-align: center;
+}
+
+img {
+    display: block;
+    width: 200px;
+    max-width: 200px;
+    height: 250px;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px 10px rgb(153, 148, 148);
+    margin-top: .8rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+    color: blue;
+    font-size: 1.2rem;
+    background-color: rgb(235, 235, 243);
+}
+
+/* media query for wider view  */
+@media screen and (min-width:600px) {
+
+    main {
+        max-width: 900px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    #cards {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+}
