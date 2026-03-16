@@ -4,3 +4,13 @@
 /* #007b72 thick one  */
 /* #0F172A */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eeeeee;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
