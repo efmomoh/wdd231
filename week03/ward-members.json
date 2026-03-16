@@ -1,0 +1,34 @@
+{
+    "family_Nmae": "Paul Chiney",
+    "date": "March 15, 2026",
+    "number_of_members": 5,
+    "visited_by_bisphoric": true,
+    
+    "family_members": [
+        {
+            "name": "Apostle Paul Chiney ",
+            "gender": "Male",
+            "birthDate": "January 1, 1845"
+        },
+        {
+            "name": "Apostle Chiney ",
+            "gender": "Male",
+            "birthDate": "January 1, 1845"
+        },
+        {
+            "name": "Mother Chiney ",
+            "gender": "Female",
+            "birthDate": "March 31, 1855"
+        },
+        {
+            "name": "Mathew Great Chiney",
+            "gender": "Male",
+            "birthDate": "December 1, 1980"
+        },
+        {
+            "name": "Wood Chiney ",
+            "gender": "Male",
+            "birthDate": "June 16, 1990"
+        }
+    ] 
+}
