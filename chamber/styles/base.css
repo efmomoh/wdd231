@@ -447,7 +447,6 @@ h2 {
 
 #members section {
     background: var(---text-header);
-    padding: 0 0 10px;
     border-radius: 14px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
     text-align: center;
@@ -467,6 +466,7 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    padding: 10px;
 }
 
 #members img,
