@@ -5,7 +5,7 @@ BASE CSS
 /* GLOBAL VARIABLES  */
 :root {
     --text-body: #0F172A;
-    ---text-header: #ffffff;
+    --text-header: #ffffff;
     --body-bg: #f4f7fb;
     --bg-header: #051937;
     --h2: #0F172A;
@@ -56,7 +56,7 @@ header {
     grid-template-columns: auto 1fr auto;
     align-items: center;
     padding: 15px 30px;
-    color: var(---text-header);
+    color: var(--text-header);
     box-shadow: 0 6px 18px rgba(0, 0, 0, .15);
     position: fixed;
     z-index: 1000;
@@ -154,7 +154,7 @@ header img:hover {
 }
 
 .navigation a {
-    color: var(---text-header);
+    color: var(--text-header);
     text-decoration: none;
     font-weight: 600;
     padding: 12px;
@@ -171,7 +171,7 @@ header img:hover {
 
 .navigation a.active:hover {
     background: var(--bg-active-hover);
-    color: var(---text-header);
+    color: var(--text-header);
 }
 
 .navigation a:hover::after {
@@ -191,7 +191,7 @@ header img:hover {
 #hamburger::before {
     content: url(/chamber/images/menu_icon.svg);
     font-size: 1rem;
-    color: var(---text-header);
+    color: var(--text-header);
 }
 
 #hamburger.open::before {
@@ -233,7 +233,7 @@ header img:hover {
 }
 
 .cta {
-    color: var(---text-header);
+    color: var(--text-header);
     text-decoration: none;
     font-weight: 700;
     font-size: 1.2rem;
@@ -262,7 +262,7 @@ h1 {
 
 h2 {
     margin-bottom: 10px;
-    color: var(---text-header);
+    color: var(--text-header);
     text-align: center;
     font-weight: bold;
     background-color: var(--h2);
@@ -280,7 +280,7 @@ h2 {
 }
 
 .grid section {
-    background: var(---text-header);
+    background: var(--text-header);
     border-radius: 14px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
     transition: .3s;
@@ -373,7 +373,7 @@ h2 {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
-    background-color: var(---text-header);
+    background-color: var(--text-header);
     padding: 0 0 15px;
     margin-top: 10px;
     border-radius: 12px;
@@ -418,7 +418,7 @@ h2 {
     padding: 10px 20px;
     border: none;
     background: var(--bg-header);
-    color: var(---text-header);
+    color: var(--text-header);
     cursor: pointer;
     border-radius: 8px;
     margin-right: 10px;
@@ -450,7 +450,7 @@ h2 {
 }
 
 #members section {
-    background: var(---text-header);
+    background: var(--text-header);
     border-radius: 14px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
     text-align: center;
@@ -553,7 +553,7 @@ fieldset {
     border: 1px solid var(--spotlight-bg);
     border-radius: 8px;
     padding: 1rem;
-    background: var(---text-header);
+    background: var(--text-header);
 }
 
 legend {
@@ -600,7 +600,7 @@ textarea {
 
 form input[type="submit"] {
     background: var(--input-bg);
-    color: var(---text-header);
+    color: var(--text-header);
     border: none;
     margin-top: 1.5rem;
     padding: .8rem;
@@ -634,7 +634,7 @@ footer {
     align-items: center;
     justify-items: center;
     background: var(--bg-header);
-    color: var(---text-header);
+    color: var(--text-header);
     text-align: center;
     padding: 30px 20px;
     margin-top: 60px;
@@ -663,7 +663,7 @@ footer .social-media a img:hover {
 }
 
 footer .site-info .email {
-    color: var(---text-header);
+    color: var(--text-header);
 }
 
 footer .site-info .email:hover {
