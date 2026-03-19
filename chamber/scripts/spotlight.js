@@ -24,9 +24,9 @@ async function loadSpotlights() {
         card.innerHTML = `
         <div class="wider-view">
             <div class="title-details">
+                <h2>${member.name}</h2>
                 <h3>${member.name}</h3>
-                <h4>${member.name}</h4>
-                <h5>${member.phone}</h5>
+                <h4>${member.phone}</h4>
             </div>
             <div class="card-details">
                 <img src="images/${member.image}" width="200px" height="200px" alt="${member.name}" loading="lazy">
