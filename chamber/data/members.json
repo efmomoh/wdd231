@@ -1,0 +1,67 @@
+{
+    "members": [
+        {
+            "name": "TechNova Solutions",
+            "address": "Broad Street Monrovia",
+            "phone": "+231770111111",
+            "website": "https://example.com",
+            "image": "tech.webp",
+            "level": 3,
+            "industry": "Technology"
+        },
+        {
+            "name": "GreenLife Agriculture",
+            "address": "Paynesville",
+            "phone": "+231770222222",
+            "website": "https://example.com",
+            "image": "farm.webp",
+            "level": 2,
+            "industry": "Agriculture"
+        },
+        {
+            "name": "City Financial Bank",
+            "address": "Ashmun Street",
+            "phone": "+231770333333",
+            "website": "https://example.com",
+            "image": "bank.webp",
+            "level": 3,
+            "industry": "Finance"
+        },
+        {
+            "name": "Star Bakery",
+            "address": "Sinkor",
+            "phone": "+231770444444",
+            "website": "https://example.com",
+            "image": "bakery.webp",
+            "level": 1,
+            "industry": "Food"
+        },
+        {
+            "name": "Ocean Logistics",
+            "address": "Freeport",
+            "phone": "+231770555555",
+            "website": "https://example.com",
+            "image": "transport.webp",
+            "level": 2,
+            "industry": "Transport"
+        },
+        {
+            "name": "LoneStar Supermarket",
+            "address": "Redlight",
+            "phone": "+231770666666",
+            "website": "https://example.com",
+            "image": "market.webp",
+            "level": 1,
+            "industry": "Retail"
+        },
+        {
+            "name": "Smart Energy Liberia",
+            "address": "Congo Town",
+            "phone": "+231770777777",
+            "website": "https://example.com",
+            "image": "energy.webp",
+            "level": 3,
+            "industry": "Energy"
+        }
+    ]
+}
