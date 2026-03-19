@@ -72,33 +72,35 @@
     </header>
 
     <main>
-        <h1>Welcome to LoneStar Chamber e-Membership Form</h1>
-        <form method="get" action="thankyou.html">
-            <fieldset>
-                <legend>
-                    Membership Form
-                </legend>
+        <section class="form-container">
+            <h1>Welcome to LoneStar Chamber e-Membership Form</h1>
+            <form method="get" action="thankyou.html">
+                <fieldset>
+                    <legend>
+                        Membership Form
+                    </legend>
 
-                <label>Full Name:<input name="fname" required placeholder="Enssah Fayia Momoh"></label>
+                    <label>Full Name:<input name="fname" required placeholder="Enssah Fayia Momoh"></label>
 
-                <label>Email:<input type="email" name="email" required placeholder="enssah25@gmail.com"></label>
+                    <label>Email:<input type="email" name="email" required placeholder="enssah25@gmail.com"></label>
 
-                <label>Membership:
-                    <select name="level" required>
-                        <option value="" class="appearance" selected disabled>Choose... &#9660; </option>
-                        <option>Gold</option>
-                        <option>Silver</option>
-                        <option>Bronze</option>
-                    </select>
-                </label>
-                <label for="textarea"> Message:
-                    <textarea name="text" id="textarea"
-                        placeholder="Tell us more about you business and why chose LoneStar Chamber e-Commerce?"></textarea>
-                </label>
+                    <label>Membership:
+                        <select name="level" required>
+                            <option value="" class="appearance" selected disabled>Choose... &#9660; </option>
+                            <option>Gold</option>
+                            <option>Silver</option>
+                            <option>Bronze</option>
+                        </select>
+                    </label>
+                    <label for="textarea"> Message:
+                        <textarea name="text" id="textarea"
+                            placeholder="Tell us more about you business and why chose LoneStar Chamber e-Commerce?"></textarea>
+                    </label>
 
-                <input type="hidden" id="timestamp" name="time">
-                <input type="submit" aria-label="Submit" required>
-            </fieldset>
+                    <input type="hidden" id="timestamp" name="time">
+                    <input type="submit" aria-label="Submit" required>
+                </fieldset>
+        </section>
         </form>
     </main>
 

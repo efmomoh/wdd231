@@ -149,7 +149,7 @@ header img:hover {
 
 }
 
-.navigation li {
+.navigation li, .main h1 {
     text-align: center;
 }
 
@@ -258,6 +258,7 @@ h1 {
     margin-bottom: 20px;
     font-weight: 700;
     color: var(--bg-header);
+    text-align: start;
 }
 
 h2 {
@@ -485,10 +486,6 @@ h2 {
     font-size: 1.2rem;
     color: var(--bg-header);
     text-align: center;
-}
-
-#members h3,
-h4 {
     border-bottom: 2px solid var(--border);
 }
 
@@ -496,7 +493,8 @@ h3 {
     font-weight: 600;
 }
 
-h5 {
+h4 {
+    border-bottom: 2px solid var(--border);
     font-weight: normal;
 }
 
@@ -543,6 +541,15 @@ DISCOVER
 FORM
 ============================================== */
 /* FORM */
+
+.form-container {
+    margin-top: 8rem;
+}
+.form-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
 form {
     width: 95%;
     margin: 1rem auto;
@@ -563,11 +570,6 @@ legend {
 }
 
 /* INPUT STRUCTURE */
-
-main h1 {
-    text-align: center;
-    font-size: 2rem;
-}
 
 form label {
     display: block;
