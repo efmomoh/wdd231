@@ -204,7 +204,7 @@ header img:hover {
 
 .hero {
     position: relative;
-    margin-bottom: 40px;
+    margin: 5rem 0;
     z-index: 1;
 }
 
