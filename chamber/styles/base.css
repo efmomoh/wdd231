@@ -42,7 +42,8 @@ body {
 
 img {
     max-width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
     display: block;
 }
 
@@ -57,7 +58,7 @@ header {
     align-items: center;
     padding: 15px 30px;
     color: var(--text-header);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, .15);
+    box-shadow: d 6px 18px rgba(d, 0, 0, .15);
     position: fixed;
     z-index: 1000;
     width: 100%;
@@ -74,6 +75,7 @@ header {
 
 #logo-container div {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
 }
 
@@ -149,7 +151,8 @@ header img:hover {
 
 }
 
-.navigation li, .main h1 {
+.navigation li,
+.main h1 {
     text-align: center;
 }
 
@@ -275,7 +278,7 @@ h2 {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 25px;
     margin-top: 20px;
 }
@@ -313,8 +316,8 @@ h2 {
 }
 
 .weather img {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     margin: 10px auto;
 }
@@ -366,7 +369,7 @@ h2 {
 
 #spotlight-container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
@@ -435,47 +438,93 @@ h2 {
 /* =========================================
    MEMBERS
 ========================================= */
-
 #members.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
 }
 
-#members.list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 75%;
-    margin: 0 auto;
-}
-
-#members section {
+#members.grid section {
     background: var(--text-header);
     border-radius: 14px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
     text-align: center;
-    transition: .3s;
+    transition: 0.3s;
 }
 
-#members section:hover {
+#members.grid section:hover {
     transform: translateY(-5px);
 }
 
-#members .title-details,
-.spotlight-card .title-details {
-    padding-bottom: 1rem;
-}
-
-#members section .card-details {
+#members.grid .card-details {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    /* image + text */
     gap: 20px;
     padding: 10px;
 }
 
-#members img,
-.card-details img {
+#members.grid .member-img {
+    display: block;
+}
+
+/* ---------------- LIST VIEW ---------------- */
+#members.list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+#members.list section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: start;
+    background: var(--text-header);
+    padding: 0 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+#members.list .card-details {
+    display: contents;
+}
+#members.list .card-details .list-view {
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+
+
+#members.list .member-img {
+    display: none;
+}
+
+#members.list .title-details,
+#members.list .info {
+    margin: 0;
+    padding: 0;
+}
+
+#members.list .title-details h2,
+#members.list .title-details h3 {
+    margin: 0;
+    font-size: 1rem;
+    border-bottom: none;
+}
+
+#members.list .info p,
+#members.list .info a {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* ---------------- GENERAL ---------------- */
+#members img {
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -487,9 +536,6 @@ h2 {
     color: var(--bg-header);
     text-align: center;
     border-bottom: 2px solid var(--border);
-}
-
-h3 {
     font-weight: 600;
 }
 
@@ -500,7 +546,7 @@ h4 {
 
 #members p,
 .spotlight-card p {
-    font-size: .9rem;
+    font-size: 0.9rem;
     color: var(--border);
     text-align: start;
     margin: 5px 0;
@@ -515,7 +561,6 @@ h4 {
     font-weight: 600;
     text-align: start;
     background-color: var(--h2);
-
 }
 
 /* ========================================
@@ -531,12 +576,6 @@ DISCOVER
 
 }
 
-.bottom {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
 /* ===========================================
 FORM
 ============================================== */
@@ -545,11 +584,13 @@ FORM
 .form-container {
     margin-top: 8rem;
 }
+
 .form-container h1 {
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
 }
+
 form {
     width: 95%;
     margin: 1rem auto;
@@ -661,7 +702,6 @@ footer .social-media a img:hover {
     transition: .3s;
     transform: scale(1.2);
     cursor: pointer;
-
 }
 
 footer .site-info .email {

@@ -10,7 +10,7 @@ if (!last) {
 
 else {
     let days = Math.floor((now - last) / 86400000);
-    message.textContent = `${days} days since visit"`;
+    message.textContent = `"${days} days since visit"`;
 }
 
 localStorage.setItem("last", now);
