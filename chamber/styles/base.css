@@ -395,7 +395,11 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    padding: 0 5px;
+    padding: 10px 5px 0;
+}
+
+.spotlight-card .title-details {
+    border-bottom: 2px solid var(--border);
 }
 
 .spotlight-card a {
@@ -459,7 +463,6 @@ h2 {
 #members.grid .card-details {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* image + text */
     gap: 20px;
     padding: 10px;
 }
@@ -492,6 +495,7 @@ h2 {
 #members.list .card-details {
     display: contents;
 }
+
 #members.list .card-details .list-view {
     display: flex;
     gap: 20px;
@@ -510,8 +514,12 @@ h2 {
     padding: 0;
 }
 
-#members.list .title-details h2,
-#members.list .title-details h3 {
+.business-tag {
+    border: none;
+}
+
+#members.list .title-details,
+#members.list .title-details {
     margin: 0;
     font-size: 1rem;
     border-bottom: none;
@@ -531,8 +539,8 @@ h2 {
     border-radius: 10px;
 }
 
-#members h3 {
-    font-size: 1.2rem;
+#members .title-details {
+    font-size: 1rem;
     color: var(--bg-header);
     text-align: center;
     border-bottom: 2px solid var(--border);
@@ -561,6 +569,10 @@ h4 {
     font-weight: 600;
     text-align: start;
     background-color: var(--h2);
+}
+
+.membership {
+    color: var(--nav-hover);
 }
 
 /* ========================================
