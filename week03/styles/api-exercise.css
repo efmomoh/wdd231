@@ -1,0 +1,40 @@
+/* API CSS EXERCISE  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, "Geneva", Tahoma, sans-serif;
+    background-color: #ffffff;
+}
+
+main {
+    background-color: #ddd;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 0;
+    color: navy;
+}
+
+p,
+figure,
+figcaption,
+footer {
+    text-align: center;
+    padding: .5rem;
+}
+
+footer {
+    font-size: .8rem;
+}
