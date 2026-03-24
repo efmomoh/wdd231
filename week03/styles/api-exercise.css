@@ -19,7 +19,7 @@ main {
     max-width: 400px;
 }
 
-h1 {
+h1, h2 {
     font-size: 1.4rem;
     font-weight: bold;
     text-align: center;

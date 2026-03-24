@@ -1,4 +1,5 @@
 // API EXERCISE 
+const city = document.querySelector("h2");
 const currentTemperature = document.getElementById("current-temp");
 const weatherIcon = document.getElementById("weather-icon");
 const FigCaptionDescription = document.querySelector("figcaption");
@@ -25,6 +26,7 @@ async function apiFetch() {
 apiFetch();
 
 function displayResults(data) {
+    city.textContent = `${data.name}, ${data.sys.country}`;
     currentTemperature.textContent = `${data.main.temp}°C`;
     const iconCode = data.weather[0].icon;
     weatherIcon.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
