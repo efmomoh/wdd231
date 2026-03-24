@@ -14,11 +14,11 @@ async function apiFetch() {
             // console.log(data);
             displayResults(data);
         } else {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            throw Error(await response.text());
         }
     }
     catch (error) {
-        console.error("Error fetching weather data:", error);
+        console.error(error);
     }
 
 }
