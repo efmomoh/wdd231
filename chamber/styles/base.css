@@ -574,15 +574,6 @@ h2 {
 #members.list .info {
     margin: 0;
     padding: 0;
-}
-
-.business-tag {
-    border: none;
-}
-
-#members.list .title-details,
-#members.list .title-details {
-    margin: 0;
     font-size: 1rem;
     border-bottom: none;
 }
@@ -631,10 +622,6 @@ h4 {
     font-weight: 600;
     text-align: start;
     background-color: var(--h2);
-}
-
-.membership {
-    color: var(--nav-hover);
 }
 
 /* ========================================
