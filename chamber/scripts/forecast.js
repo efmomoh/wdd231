@@ -65,8 +65,11 @@ function displayResults(data) {
     condition.textContent = data.weather[0].description;
 
     const icon = data.weather[0].icon;
+    const description = data.weather[0].description;
 
-    document.querySelector(".weather img").src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+    const weatherImg = document.querySelector(".weather img");
+    weatherImg.src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+    weatherImg.alt = description;
 
     sunrise.textContent = new Date(data.sys.sunrise * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     sunset.textContent = new Date(data.sys.sunset * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
@@ -93,7 +96,7 @@ function displayForecast(data) {
 
         card.innerHTML = `
             <h3>${date}</h3>
-            <img src="https://openweathermap.org/img/wn/${icon}@2x.png" class="icon">
+            <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${day.weather[0].description}" class="icon">
             <p>${day.main.temp}°C</p>
             <p class="icon-desc">${day.weather[0].description}</p>
         `;
