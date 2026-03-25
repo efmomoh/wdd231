@@ -31,10 +31,10 @@ async function loadSpotlights() {
             <div class="card-details">
                 <img src="images/${member.image}" width="200px" height="200px" alt="${member.name}" loading="lazy">
                 <div> 
-                    <p><strong>Email:</strong> ${member.address}</p>
+                    <p><strong>Address:</strong> ${member.address}</p>
                     <p><strong>Phone:</strong> ${member.phone}</p>
                     <p class="membership"><strong>Membership Level:</strong> ${member.level}</p>
-                    <p><strong>URL:</strong> <a href="${member.website}" target="_blank">Visit Website</a></P/
+                    <p><strong>URL:</strong> <a href="${member.website}" target="_blank">Visit Website</a></p>
                 </div>
             </div>
         </div>`;

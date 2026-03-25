@@ -74,6 +74,22 @@ header {
     gap: 5px;
 }
 
+#logo-container a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform .2s ease, color .2s ease;
+}
+
+#logo-container a:hover,
+#logo-container a:focus-visible {
+    transform: translateY(-1px);
+    color: var(--nav-hover);
+}
+
 #logo-container div {
     display: flex;
     flex-wrap: wrap;

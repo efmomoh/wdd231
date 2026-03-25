@@ -26,7 +26,7 @@ function displayMembers(members) {
     <div class="card-details">
         <img class="member-img" src="images/${member.image}" width="200" height="200" alt="${member.name}" loading="lazy">
             <div class="info list-view"> 
-                    <p><strong>Email:</strong> ${member.address}</p>
+                    <p><strong>Address:</strong> ${member.address}</p>
                     <p><strong>Phone:</strong> ${member.phone}</p>
                     <p class="membership">Membership Level: ${member.level}</p>
                     <p><strong>Website:</strong> <a href="${member.website}" target="_blank">Visit Website</a></p>

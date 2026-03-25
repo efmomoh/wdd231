@@ -46,10 +46,20 @@ forecastWeather();
 
 // DISPLAY CURRENT
 function displayResults(data) {
-    temp.textContent = `${data.main.temp}°C`;
-    feels_like.textContent = `${data.main.feels_like}°C`;
-    high.textContent = `${data.main.temp_max}°C`;
-    low.textContent = `${data.main.temp_min}°C`;
+    const temp = document.getElementById('temp');
+    const feels_like = document.getElementById('feels_like');
+    const high = document.getElementById('high');
+    const low = document.getElementById('low');
+    const humidity = document.getElementById('humidity');
+    const wind_speed = document.getElementById('wind_speed');
+    const condition = document.getElementById('condition');
+    const sunrise = document.getElementById('sunrise');
+    const sunset = document.getElementById('sunset');
+
+    temp.textContent = `${Math.round(data.main.temp)}°C`;
+    feels_like.textContent = `${Math.round(data.main.feels_like)}°C`;
+    high.textContent = `${Math.round(data.main.temp_max)}°C`;
+    low.textContent = `${Math.round(data.main.temp_min)}°C`;
     humidity.textContent = `${data.main.humidity}%`;
     wind_speed.textContent = `${data.wind.speed} m/s`;
     condition.textContent = data.weather[0].description;
@@ -58,16 +68,17 @@ function displayResults(data) {
 
     document.querySelector(".weather img").src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
 
-    sunrise.textContent = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
-
-    sunset.textContent = new Date(data.sys.sunset * 1000).toLocaleTimeString();
-
+    sunrise.textContent = new Date(data.sys.sunrise * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    sunset.textContent = new Date(data.sys.sunset * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 }
 
 
 // DISPLAY FORECAST
 function displayForecast(data) {
     const container = document.getElementById("forecast-container");
+
+    // Set the city name in the header
+    document.getElementById("city").textContent = `${data.city.name}, ${data.city.country}`;
 
     container.innerHTML = "";
 

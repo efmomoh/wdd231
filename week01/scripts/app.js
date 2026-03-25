@@ -1,5 +1,8 @@
-const currentYear = document.querySelector('#year').textContent = `Copyright @ ${new Date().getFullYear()} Taurus ProMax`;;
-const lastModifiedDate = document.querySelector('#lastModified').textContent = `LastModified: ${document.lastModified}`;
+const year = document.querySelector('#year');
+year.textContent = `Copyright @ ${new Date().getFullYear()} Taurus ProMax`;
+
+const lastModified = document.querySelector('#lastModified');
+lastModified.textContent = `LastModified: ${document.lastModified}`;
 
 
 

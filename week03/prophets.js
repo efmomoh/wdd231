@@ -18,7 +18,7 @@ const displayProphets = (prophets) => {
                 <p>Date of Birth: ${prophet.birthdate}</p>
                 <p>Place of Birth: ${prophet.birthplace}</p>
             </div>
-            <img src="${prophet.imageurl}" Prophet alt="${prophet.name} ${prophet.lastname}" loading="lazy" width="200"
+            <img src="${prophet.imageurl}" alt="${prophet.name} ${prophet.lastname}" loading="lazy" width="200"
             height="250">
         </section>`
     ).join("");
