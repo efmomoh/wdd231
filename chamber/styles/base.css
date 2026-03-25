@@ -215,13 +215,13 @@ header img:hover {
 }
 
 #hamburger::before {
-    content: url(../images/menu_icon.svg);
+    content: url("../images/menu_icon.svg");
     font-size: 1rem;
     color: var(--text-header);
 }
 
 #hamburger.open::before {
-    content: url(../images/x_circle_ico.svg);
+    content: url("../images/x_circle_ico.svg");
 }
 
 /* =========================================
@@ -247,6 +247,7 @@ header img:hover {
     bottom: 30px;
     right: 30px;
     background: var(--bg-header);
+    color: var(--text-header);
     padding: 18px 28px;
     border-radius: 14px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
@@ -407,10 +408,10 @@ h2 {
 }
 
 .forecast-card h3,
-img,
-p {
+.forecast-card img,
+.forecast-card p {
     text-align: center;
-    color: #0F172A;
+    color: var(--text-body);
 }
 
 .icon {
