@@ -1,41 +1,91 @@
-const weatherKey = "c90713114fb543e78dd232812261803";
-const weatherURL = `https://api.weatherapi.com/v1/forecast.json?key=${weatherKey}&q=Monrovia&days=3`;
+const weatherKey = "625e320da1dff73739d188728d972a31";
+const latitude = "6.32";
+const longitude = "-10.81";
+const units = "metric";
 
-async function loadWeather() {
-    const response = await fetch(weatherURL);
-    const data = await response.json();
+const currentURL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=${units}&appid=${weatherKey}`;
 
-    // --- CURRENT WEATHER ---
-    const current = data.current;
-    const today = data.forecast.forecastday[0];
+const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=${units}&appid=${weatherKey}`;
 
-    document.getElementById("temp").textContent = `${current.temp_f}°F`;
-    document.getElementById("high").textContent = `${today.day.maxtemp_f}°F`;
-    document.getElementById("low").textContent = `${today.day.mintemp_f}°F`;
-    document.getElementById("humidity").textContent = `${current.humidity}%`;
-    document.getElementById("sunrise").textContent = today.astro.sunrise;
-    document.getElementById("sunset").textContent = today.astro.sunset;
 
-    const weatherImg = document.querySelector(".weather img");
-    weatherImg.src = `https:${current.condition.icon}`;
-    weatherImg.alt = current.condition.text;
-    document.getElementById("condition").textContent = current.condition.text;
-
-    // --- 3-DAY FORECAST ---
-    const forecastContainer = document.getElementById("forecast-container");
-    forecastContainer.innerHTML = "";
-
-    data.forecast.forecastday.forEach((day, index) => {
-        const dayName = index === 0
-            ? "Today"
-            : new Date(day.date).toLocaleDateString("en-US", { weekday: "long" });
-
-        const p = document.createElement("p");
-        p.innerHTML = `${dayName}: <strong>${day.day.avgtemp_f}°F</strong> - ${day.day.condition.text} 
-        <img src="https:${day.day.condition.icon}" alt="${day.day.condition.text}" style="width:48px; height:48px; vertical-align:middle;">`;
-
-        forecastContainer.appendChild(p);
-    });
+// CURRENT WEATHER
+async function getWeather() {
+    try {
+        const response = await fetch(currentURL);
+        if (response.ok) {
+            const data = await response.json();
+            displayResults(data);
+        } else {
+            throw Error(await response.text());
+        }
+    }
+    catch (error) {
+        console.error(error);
+    }
 }
 
-loadWeather();
+// THREE (3) DAYS FORECAST
+async function forecastWeather() {
+    try {
+        const response = await fetch(forecastURL);
+        if (response.ok) {
+            const data = await response.json();
+            displayForecast(data);
+        } else {
+            throw Error(await response.text());
+        }
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+
+
+getWeather();
+forecastWeather();
+
+// DISPLAY CURRENT
+function displayResults(data) {
+    temp.textContent = `${data.main.temp}°C`;
+    feels_like.textContent = `${data.main.feels_like}°C`;
+    high.textContent = `${data.main.temp_max}°C`;
+    low.textContent = `${data.main.temp_min}°C`;
+    humidity.textContent = `${data.main.humidity}%`;
+    wind_speed.textContent = `${data.wind.speed} m/s`;
+    condition.textContent = data.weather[0].description;
+
+    const icon = data.weather[0].icon;
+
+    document.querySelector(".weather img").src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+
+    sunrise.textContent = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
+
+    sunset.textContent = new Date(data.sys.sunset * 1000).toLocaleTimeString();
+
+}
+
+
+// DISPLAY FORECAST
+function displayForecast(data) {
+    const container = document.getElementById("forecast-container");
+
+    container.innerHTML = "";
+
+    // Filter one forecast per day (12:00)
+    const daily = data.list.filter(item => item.dt_txt.includes("12:00:00"));
+    daily.slice(0, 3).forEach(day => {
+        const card = document.createElement("div");
+        card.classList.add("forecast-card");
+        const date = new Date(day.dt_txt).toLocaleDateString("en-US", { weekday: "long" });
+
+        const icon = day.weather[0].icon;
+
+        card.innerHTML = `
+            <h3>${date}</h3>
+            <img src="https://openweathermap.org/img/wn/${icon}@2x.png" class="icon">
+            <p>${day.main.temp}°C</p>
+            <p class="icon-desc">${day.weather[0].description}</p>
+        `;
+        container.appendChild(card);
+    });
+}

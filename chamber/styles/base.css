@@ -56,9 +56,9 @@ header {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    padding: 15px 30px;
+    padding: 15px;
     color: var(--text-header);
-    box-shadow: d 6px 18px rgba(d, 0, 0, .15);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .15);
     position: fixed;
     z-index: 1000;
     width: 100%;
@@ -99,7 +99,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 15px;
+    gap: 5px;
 }
 
 header img {
@@ -191,16 +191,21 @@ header img:hover {
     background: none;
     border: none;
     cursor: pointer;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #hamburger::before {
-    content: url(/chamber/images/menu_icon.svg);
+    content: url(../images/menu_icon.svg);
     font-size: 1rem;
     color: var(--text-header);
 }
 
 #hamburger.open::before {
-    content: url(/chamber/images/x_circle_ico.svg);
+    content: url(../images/x_circle_ico.svg);
 }
 
 /* =========================================
@@ -215,7 +220,7 @@ header img:hover {
 
 .hero img {
     width: 100%;
-    height: 400px;
+    height: 250px;
     object-fit: cover;
     border-radius: 14px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, .15);
@@ -338,19 +343,19 @@ h2 {
 
 .condition-container p {
     text-align: start;
-    padding-left: 10px;
+    padding: 2px;
 }
 
 /* FORECAST */
 
-#forecast-container {
-    padding-left: 20px;
+#forecast-container .icon-desc {
+    padding-left: 10px;
 }
 
 #forecast-container p {
     margin: 5px 0;
     font-weight: 600;
-    text-align: start;
+    text-align: center;
 }
 
 #forecast-container img {
@@ -360,6 +365,44 @@ h2 {
     vertical-align: middle;
     margin-left: 5px;
 }
+
+.forecast-container {
+
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+
+
+}
+
+.forecast-card {
+
+    background: white;
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    text-align: center;
+    max-width: 100%;
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.forecast-card h3,
+img,
+p {
+    text-align: center;
+    color: #0F172A;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
 
 /* SPOTLIGHT */
 
@@ -478,7 +521,7 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -704,6 +747,10 @@ footer .social-media {
     gap: 15px;
     justify-content: center;
     align-items: center;
+}
+
+footer p {
+    color: var(--text-header);
 }
 
 footer .social-media img {
