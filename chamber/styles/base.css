@@ -213,8 +213,7 @@ header img:hover {
 }
 
 #hamburger::before {
-    color: var(--text-header);
-        content:;
+    content: url("/chamber/images/menu_icon.svg");
     font-size: 1rem;
 }
 
