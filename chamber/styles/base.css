@@ -53,8 +53,8 @@ img {
 
 header {
     background: var(--bg-header);
-    display: grid;
-    grid-template-columns: auto 1fr auto;
+   display: flex;
+   justify-content: space-between;
     align-items: center;
     padding: 10px;
     color: var(--text-header);
@@ -76,7 +76,6 @@ header {
 
 #logo-container a {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     gap: 8px;
     text-decoration: none;
@@ -113,7 +112,6 @@ header {
 
 .header-controls {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     gap: 5px;
 }
