@@ -6,6 +6,7 @@ BASE CSS
 :root {
     --text-body: #0F172A;
     --text-header: #ffffff;
+    --menu: #00C3FF;
     --body-bg: #f4f7fb;
     --bg-header: #051937;
     --h2: #0F172A;
@@ -53,8 +54,8 @@ img {
 
 header {
     background: var(--bg-header);
-   display: flex;
-   justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     padding: 10px;
     color: var(--text-header);
@@ -213,13 +214,15 @@ header img:hover {
 }
 
 #hamburger::before {
-    content: url("/wdd231/chamber/images/menu_icon.svg");
-    font-size: 1rem;
-    color: var(--text-header);
+    content: " ☰";
+    font-size: 2.4rem;
+    color: var(--menu);
 }
 
 #hamburger.open::before {
-    content: url("/wdd231/chamber/images/x_circle_ico.svg");
+    content: " X";
+    font-size: 2.4rem;
+        color: var(--menu);
 }
 
 /* =========================================
