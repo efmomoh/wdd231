@@ -217,6 +217,8 @@ header img:hover {
     content: " ☰";
     font-size: 3rem;
     color: var(--menu);
+    height: 48px;
+    width: 48px;
 }
 
 #hamburger.open::before {
