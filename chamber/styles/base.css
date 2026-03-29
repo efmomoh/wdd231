@@ -219,7 +219,7 @@ header img:hover {
 }
 
 #hamburger.open::before {
-    content: url(/chamber/images/x_circle_ico.svg);
+    content: url(/chamber/images/x-circle.svg);
 }
 
 /* =========================================
