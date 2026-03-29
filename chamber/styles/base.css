@@ -219,6 +219,7 @@ header img:hover {
     color: var(--menu);
     height: 48px;
     width: 48px;
+    object-fit: cover;
 }
 
 #hamburger.open::before {
