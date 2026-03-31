@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Exercise</title>
+    <link rel="stylesheet" href="practice-styles/styles.css">
+    <script src="practice-scripts/scripts.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Modal Exercise</h1>
+        <button type="submit" class="button openModal">Sign Up</button>
+
+        <dialog id="modal">
+            <h2>Modal Practice</h2>
+            <p>I am learning Modal or Popup Window designs or layouts</p>
+            <button type="submit" id="closeModal">❌</button>
+            <form action="" method="dialog">
+                <label for="firstName">First Name: </label>
+                <input type="text" name="fname" id="firstName" required>
+                <label for="lastName">Last Name: </label>
+                <input type="text" name="lname" id="lastName" required>
+                <label for="usermail">Email: </label>
+                <input type="email" name="mail" id="usermail" required>
+                <button type="submit" id="suscribe">Suscribe Now</button>
+            </form>
+        </dialog>
+
+        <button class="myModal open-modal" popovertarget="feedback">Give us some Feedback</button>
+        <dialog class="myModal" id="feedback" popover>
+            <h2>My Modal</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dolor est sint ratione rem consequuntur natus, facilis dolores iusto aperiam fugiat culpa officiis quod distinctio hic, voluptas illum nam sequi!</p>
+            <button id="close-modal" popovertarget="feedback" popovertargetaction="hide">❌</button>
+            <form action="" method="dialog">
+                <label for="username">Full Name:</label>
+                <input type="text" name="name" id="username" required>
+                <label for="useremail">Email:</label>
+                <input type="text" name="email" id="useremail" required>
+                <label for="option">Services You Like:</label>
+                <select name="" id="option">
+                    <option value="" selected disabled>Choose one option</option>
+                    <option value="">A</option>
+                    <option value="">B</option>
+                    <option value="">C</option>
+                </select>
+                <label for="textarea">Message:</label>
+                <textarea name="message" id="textarea" cols="20" rows="2" required></textarea>
+                <button type="submit" id="send-feedback">Submit Feedback</button>
+            </form>
+        </dialog>
+
+    </main>
+
+</body>
+
+</html>

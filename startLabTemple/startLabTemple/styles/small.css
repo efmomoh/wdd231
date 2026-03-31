@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+#mydialog {
+    max-width: 300px;
+    border-radius: 10px;
+    border: 2px solid #fcb607;
+}
+
+#mydialog div {
+    display: grid;
+    grid-template-columns: auto 44px;
+    gap: 20px;
+}
+
+#mydialog button {
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.5rem;
+    background-color: chocolate;
+    color: white;
+    border: none;
+}
+
+#mydialog button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#mydialog h2 {
+    font-size: 1.2rem;
+}
+
+dialog[open] {
+    background-color: rgba(214, 214, 226);
+}
+
+::backdrop {
+    background-color: rgba(8, 8, 226, 0.5);
+}

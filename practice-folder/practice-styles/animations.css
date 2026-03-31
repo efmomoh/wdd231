@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: teal;
+}
+
+main {
+    margin: 5rem auto;
+    max-width: 400px;
+}
+
+#loader {
+    margin: 2rem;
+    width: 50px;
+    height: 50px;
+    border: 5px solid transparent;
+    border-color: #999 transparent #999 transparent;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+    box-shadow: 0 0 1rem rgb(0 0 225 / 40%);
+
+}
+
+#loader::after {
+    content: '⚙';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.25);
+    }
+}
+
+
+
+.loader-t {
+    /* the only thing that changed was using transition versus animation */
+    transition: spin 1.5s linear infinite;
+}
+
+.loader-t::after {
+    content: ' ⚙';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* the only thing that changed was using transition versus animation and the size and visibility at start */
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 1.5s ease-in-out;
+    font-size: 2rem;
+}
+
+.loader-t:hover {
+    transform: rotate(360deg);
+    /* Rotate on hover */
+}
+
+.loader-t:hover::after {
+    transform: translate(-50%, -50%) scale(1.5);
+    /* Scale on hover */
+}

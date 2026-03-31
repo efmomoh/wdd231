@@ -35,6 +35,7 @@
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/forecast.js" defer></script>
     <script src="scripts/spotlight.js" defer></script>
+    <script src="scripts/modal.js" defer></script>
     <script src="scripts/footer.js" defer></script>
 </head>
 
@@ -119,7 +120,40 @@
             <h2>Spotlight</h2>
             <div id="spotlight-container"></div>
         </section>
+
+    <button type="submit" class="button open-modal">Subscribe to our 24/7 Newsletter</button>
+
     </main>
+
+    <!-- modal or popup window  using JS -->
+    <dialog id="signUp">
+        <h3>Subscribe to our Newsletter</h3>
+        <p>Here at LoneStar Chamber e-Commerce, we give you updates 24/7</p>
+        <button id="closeModal" type="submit">❌</button>
+        <form action="#" id="form" method="dialog">
+            <label for="name"> Full Name: </label>
+            <input type="text" name="fullname" id="name" placeholder="Enssah Fayia Momoh" required>
+            <label for="email">Email: </label>
+            <input type="email" name="useremail" id="email" placeholder="myemail@modal.com" required>
+            <button type="submit" class="subscribe-btn">Suscribe Now</button>
+        </form>
+    </dialog>
+
+    <button type="submit" class="button open-modal" popovertarget="feedback">Give us some feedback</button>
+    <dialog class="modal" id="feedback" popover>
+        <h3>Tell Us What You Liked About Us</h3>
+        <p>What do you like about our services? We'd like to get some feedback from you.</p>
+        <button id="closeModal" type="submit" popovertarget="feedback" popovertargetaction="hide">❌</button>
+        <form action="#" id="form" method="dialog">
+            <label for="username">Full Name: </label>
+            <input type="text" name="name" id="username" required>
+            <label for="useremail">Email: </label>
+            <input type="text" name="email" id="useremail" required>
+            <label for="textarea">Message: </label>
+            <textarea name="textarea" id="textarea" cols="30" rows="2" required></textarea>,
+            <button type="submit" class="message-btn">Send Message</button>
+        </form>
+    </dialog>
 
     <footer>
         <section class="site-info">

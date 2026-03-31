@@ -103,7 +103,7 @@ function displayCourses(courseList) {
 
         </section>
         `).join("");
-    
+
     // add the total credits completed
     const creditsCompleted = courseList.filter(course => course.completed).reduce((total, course) => total + course.credits, 0)
 
@@ -112,6 +112,13 @@ function displayCourses(courseList) {
 
     // display the credits
     DisplayCredits.textContent = `Completed Status ${creditsCompleted} | Remaining Credits: ${creditsNotCompleted}`
+
+    // ***ADD** click event listener to each course card
+    cardContainer.querySelectorAll('.course-card').forEach((card, index) => {
+        card.addEventListener('click', () => {
+            displayCourseDetails(courseList[index]);
+        });
+    });
 }
 
 // add event for the buttons
@@ -132,5 +139,37 @@ buttonCse.addEventListener('click', () => {
 // call the courses, load, and display
 displayCourses(courses);
 
+// Modal FUNCTION
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+  `;
+    courseDetails.showModal();
 
+    const closeModal = document.querySelector('#closeModal');
+    closeModal.addEventListener('click', () => {
+        courseDetails.close();
+    });
+}
+
+const courseDetails = document.querySelector("#course-details");
+
+courseDetails.addEventListener('click', (e) => {
+    if (e.target === courseDetails) {
+        courseDetails.close();
+    }
+});
+
+courseDetails.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        courseDetails.close();
+    }
+});
 
