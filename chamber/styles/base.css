@@ -26,7 +26,7 @@ BASE CSS
     --form-focus: #3a7adf;
     --card-border: #dbe5f6;
     --modal-content: #293c64;
-
+   
 }
 
 /* =========================================
@@ -263,17 +263,15 @@ header img:hover {
 }
 
 #hamburger::before {
-    content: "";
-    display: inline-block;
+    content: url("../images/menu.svg");
     width: 44px;
     height: 44px;
-    background-image: url("../images/menu.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 #hamburger.open::before {
-    background-image: url("../images/x-circle.svg");
+    content: url("../images/x-circle.svg");
+    width: 44px;
+    height: 44px;
 }
 
 /* =========================================
@@ -683,7 +681,6 @@ DISCOVER
     text-align: left;
 
 }
-
 #visitMessage {
     text-align: center;
     font-size: 1.2rem;
@@ -901,11 +898,11 @@ textarea {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    
     font-size: 1.3rem;
     width: 100%;
     text-align: left;
-    border: 1px solid;
+    border: 1px solid ;
     border-radius: 10px;
     background: #f1f7ff;
     color: var(--h2);
