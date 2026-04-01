@@ -20,6 +20,13 @@ BASE CSS
     --input-bg: #007b72;
     --input-valid: #2ecc71;
     --input-required: #ff0000;
+    --form-bg: #fefcff;
+    --form-h1: #103e82;
+    --form-border: #b3c9ee;
+    --form-focus: #3a7adf;
+    --card-border: #dbe5f6;
+    --modal-content: #293c64;
+   
 }
 
 /* =========================================
@@ -534,16 +541,6 @@ h2 {
     transition: .3s;
 }
 
-/* #membership button {
-    display: flex;
-    flex-direction: column;
-    padding: .5rem;
-    width: 100%;
-    justify-content: center;
-    align-self: center;
-    font-size: 1.3rem;
-} */
-
 .menu button:hover {
     background: var(--nav-hover);
     color: var(--active-hover);
@@ -711,7 +708,7 @@ FORM
     text-align: center;
     font-size: 1.5rem;
     font-weight: 700;
-    color: #103e82;
+    color: var(--form-h1);
     margin-bottom: 0.5rem;
     grid-column: 1 / -1;
 }
@@ -777,7 +774,7 @@ textarea {
 }
 
 .user-form legend {
-    color: #103f86;
+    color: var(--form-bg);
     font-weight: 700;
     margin-bottom: 0.8rem;
 }
@@ -785,8 +782,8 @@ textarea {
 .user-form input,
 .user-form select,
 .user-form textarea {
-    background: #fefcff;
-    border: 1px solid #b3c9ee;
+    background: var(--form-bg);
+    border: 1px solid var(--form-border);
     border-radius: 8px;
     padding: 0.7rem;
 }
@@ -795,7 +792,7 @@ textarea {
 .user-form select:focus,
 .user-form textarea:focus {
     outline: none;
-    border-color: #3a7adf;
+    border-color: var(--form-focus);
     box-shadow: 0 0 0 2px rgba(45, 113, 225, 0.25);
 }
 
@@ -807,7 +804,7 @@ textarea {
 }
 
 #company-card section {
-    border: 1px solid #dbe5f6;
+    border: 1px solid var(--card-border);
     border-radius: 14px;
     background: #ffffff;
     padding: 0.95rem;
@@ -827,7 +824,7 @@ textarea {
 }
 
 #company-card section button,
-#membership button,
+/* #membership button, */
 .user-form input[type="submit"] {
     display: inline-flex;
     align-items: center;
@@ -835,7 +832,7 @@ textarea {
     border: 0;
     border-radius: 8px;
     background: linear-gradient(135deg, #2d6ce0 0%, #006ebf 100%);
-    color: #fff;
+    color: var(--text-header);
     padding: 0.58rem 0.9rem;
     cursor: pointer;
     font-weight: 600;
@@ -872,7 +869,7 @@ textarea {
     max-width: 500px;
     border: 1px solid #1f50a4;
     border-radius: 14px;
-    background: #ffffff;
+    background: var(--text-header);
     box-shadow: 0 20px 40px rgba(14, 40, 84, 0.24);
     padding: 1.2rem;
 }
@@ -882,7 +879,7 @@ textarea {
 }
 
 #modalBox .modal-content {
-    color: #293c64;
+    color: var(--modal-content);
     line-height: 1.45;
 }
 
@@ -891,7 +888,7 @@ textarea {
     right: 10px;
     top: 10px;
     background: rgba(230, 237, 250, 0.9);
-    border: 1px solid #b8cbee;
+    border: 1px solid var(--card-border);
     border-radius: 50%;
     width: 34px;
     height: 34px;
@@ -909,11 +906,12 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-self: center;
+    align-items: center;
+    
     font-size: 1.3rem;
     width: 100%;
     text-align: left;
-    border: 1px solid #7fa4dd;
+    border: 1px solid ;
     border-radius: 10px;
     background: #f1f7ff;
     color: var(--h2);
@@ -924,6 +922,16 @@ textarea {
     animation: slideUpFade .8s ease forwards, floatCard 2s ease-in-out infinite;
     transition: background 0.2s ease, border-color 0.2s ease;
 }
+
+/* #membership button {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    width: 100%;
+    justify-content: center;
+    align-self: center;
+    font-size: 1.3rem;
+} */
 
 #membership button:hover {
     background: #e4efff;
