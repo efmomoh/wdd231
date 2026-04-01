@@ -6,22 +6,18 @@
 
     /* HEADER */
     header {
-        padding: 10px 20px;
+        padding: 10px;
     }
 
     .site-name {
-        font-size: 1.8rem;
-    }
-
-    .site-tag {
-        font-size: 0.9rem;
+        font-size: 1.5rem;
     }
 
     /* HERO */
     .hero-card {
         bottom: 20px;
         right: 40px;
-        padding: 20px 30px;
+        padding: 10px 15px;
     }
 
     .hero img {
@@ -37,18 +33,18 @@
     .navigation {
         display: flex;
         flex-direction: row;
-        position: static;
+        position: relative;
         background: none;
         padding: 0;
         justify-content: flex-end;
-        gap: 20px;
         box-shadow: none;
         border: none;
+        width: auto;
+        top: auto;
+        left: auto;
     }
 
     .navigation a {
-        padding: 12px 20px;
-        font-size: 1.1rem;
         transition: all 0.3s ease;
     }
 
@@ -91,7 +87,6 @@
     /* FORM */
     form {
         max-width: 600px;
-        padding: 2rem;
     }
 
     fieldset {
@@ -120,57 +115,11 @@
     h3 {
         font-size: 1.2rem;
     }
-}
 
-/* Extra large screens */
-@media (min-width: 1000px) {
-    header {
-        padding: 14px 32px;
+    .form-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        max-width: 800px;
+        gap: 20px;
     }
 
-    .site-name {
-        font-size: 2rem;
-    }
-
-    .site-tag {
-        font-size: 1rem;
-    }
-
-    .navigation {
-        gap: 24px;
-    }
-
-    .navigation a {
-        padding: 14px 22px;
-        font-size: 1.2rem;
-    }
-}
-
-/* Mobile screens */
-@media (max-width: 599px) {
-    #hamburger {
-        display: flex;
-    }
-
-    .navigation {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--bg-header);
-        padding: 15px;
-        gap: 12px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .navigation.open {
-        display: flex;
-    }
-
-    .navigation a {
-        font-size: 1rem;
-        padding: 10px 12px;
-    }
 }

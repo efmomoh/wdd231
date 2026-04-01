@@ -7,7 +7,16 @@
             "website": "https://example.com",
             "image": "tech.webp",
             "level": 3,
-            "industry": "Technology"
+            "membership": "Gold",
+            "membershipBenefit": [
+                "All Silver benefits",
+                "Homepage spotlight advertising",
+                "Premium business promotion",
+                "VIP training access",
+                "Priority event sponsorship"
+            ],
+            "industry": "Technology",
+            "description": "A technology company specializing in software development and IT consulting services."
         },
         {
             "name": "GreenLife Agriculture",
@@ -16,7 +25,16 @@
             "website": "https://example.com",
             "image": "farm.webp",
             "level": 2,
-            "industry": "Agriculture"
+            "membership": "Silver",
+            "membershipBenefit": [
+                "All Bronze benefits",
+                "Event discounts",
+                "Social media promotion",
+                "Featured directory listing",
+                "Advanced training workshops"
+            ],
+            "industry": "Agriculture",
+            "description": "A sustainable agriculture company focused on crop production and food supply."
         },
         {
             "name": "City Financial Bank",
@@ -25,7 +43,16 @@
             "website": "https://example.com",
             "image": "bank.webp",
             "level": 3,
-            "industry": "Finance"
+            "membership": "Gold",
+            "membershipBenefit": [
+                "All Silver benefits",
+                "Homepage spotlight advertising",
+                "Premium business promotion",
+                "VIP training access",
+                "Priority event sponsorship"
+            ],
+            "industry": "Finance",
+            "description": "A commercial bank offering savings accounts, loans, and investment services."
         },
         {
             "name": "Star Bakery",
@@ -34,7 +61,15 @@
             "website": "https://example.com",
             "image": "bakery.webp",
             "level": 1,
-            "industry": "Food"
+            "membership": "Bronze",
+            "membershipBenefit": [
+                "Directory listing",
+                "Networking opportunities",
+                "Basic business training",
+                "Participation in chamber events"
+            ],
+            "industry": "Food",
+            "description": "A neighborhood bakery producing bread, cakes, and pastries daily."
         },
         {
             "name": "Ocean Logistics",
@@ -43,7 +78,16 @@
             "website": "https://example.com",
             "image": "transport.webp",
             "level": 2,
-            "industry": "Transport"
+            "membership": "Silver",
+            "membershipBenefit": [
+                "All Bronze benefits",
+                "Event discounts",
+                "Social media promotion",
+                "Featured directory listing",
+                "Advanced training workshops"
+            ],
+            "industry": "Transport",
+            "description": "A logistics company providing cargo transport and delivery services."
         },
         {
             "name": "LoneStar Supermarket",
@@ -52,7 +96,15 @@
             "website": "https://example.com",
             "image": "market.webp",
             "level": 1,
-            "industry": "Retail"
+            "membership": "Bronze",
+            "membershipBenefit": [
+                "Directory listing",
+                "Networking opportunities",
+                "Basic business training",
+                "Participation in chamber events"
+            ],
+            "industry": "Retail",
+            "description": "A supermarket selling groceries, home supplies, and consumer goods."
         },
         {
             "name": "Smart Energy Liberia",
@@ -60,8 +112,15 @@
             "phone": "+231770777777",
             "website": "https://example.com",
             "image": "energy.webp",
-            "level": 3,
-            "industry": "Energy"
+            "level": 0,
+            "membership": "NP",
+            "membershipBenefit": [
+                "Free directory listing",
+                "Community networking",
+                "Access to selected chamber events"
+            ],
+            "industry": "Energy",
+            "description": "A non-profit organization promoting renewable energy and environmental sustainability."
         }
     ]
 }

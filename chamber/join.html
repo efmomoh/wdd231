@@ -74,36 +74,105 @@
     </header>
 
     <main>
+
         <section class="form-container">
-            <h1>Welcome to LoneStar Chamber e-Membership Form</h1>
+            <h1>Welcome to LoneStar Chamber e-Commerce Membership Form</h1>
+
             <form method="get" action="thankyou.html">
                 <fieldset>
-                    <legend>
-                        Membership Form
-                    </legend>
+                    <legend>Membership Form</legend>
 
-                    <label>Full Name:<input name="fname" required placeholder="Enssah Fayia Momoh"></label>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" name="firstName" id="firstName"
+                        title="Please enter your first name (Enssah, Paul, etc.)" required placeholder="Enssah"
+                        autocomplete="first-name">
 
-                    <label>Email:<input type="email" name="email" required placeholder="enssah25@gmail.com"></label>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" name="lastName" id="lastName"
+                        title="Please enter your last name(Momoh, Cheney metc.)" placeholder="Momoh" required
+                        autocomplete="last-name">
 
-                    <label>Membership:
-                        <select name="level" required>
-                            <option value="" class="appearance" selected disabled>Choose... &#9660; </option>
-                            <option>Gold</option>
-                            <option>Silver</option>
-                            <option>Bronze</option>
-                        </select>
-                    </label>
-                    <label for="textarea"> Message:
-                        <textarea name="text" id="textarea"
-                            placeholder="Tell us more about you business and why chose LoneStar Chamber e-Commerce?"></textarea>
-                    </label>
+                    <label for="usermail">Email Address:</label>
+                    <input type="email" name="email" id="usermail"
+                        title="Please enter your email (eg. tauruspromax@gmail.com)" required
+                        placeholder="enssah25@gmail.com" autocomplete="user-email">
+
+                    <label for="phoneNumber">Mobile Phone Number:</label>
+                    <input type="tel" name="phone" id="phoneNumber"
+                        title="Please enter your phone number (eg. 555-999-1111)" placeholder="555-555-5555" autocomplete="phone-number" required>
+
+                    <label for="organization-title">Organization Title:</label>
+                    <input type="text" name="organization-title" id="organization-title" placeholder="eg. Program Manager"
+                        title="Please enter your organizationaTitle (letters, spaces, hyphens only, min 7 characters. eg. MANAGER)"
+                        autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" required>
+
+                    <label for="businessName">Business/Organization's Name:</label>
+                    <input type="text" name="business" id="businessName"
+                        title="Please enter your business or organization's name (eg. TaurusProMax Inc.)"
+                       placeholder="TaurusPromax Inc."  autocomplete="organization">
+
+                    <label for="membershipLevel">Membership Level:</label>
+                    <select name="level" id="membershipLevel" required>
+                        <option value="" selected disabled>Choose Membership... &#9660; </option>
+                        <option value="non-profit">Non-profit Membership (Non-Profit)</option>
+                        <option value="bronze">Bronze Membership (Bronze)</option>
+                        <option value="silver">Silver Membership (Silver)</option>
+                        <option value="gold">Gold Membership (Gold)</option>
+                    </select>
+
+                    <label for="textarea">Message (Description of your organization):</label>
+                    <textarea name="message" id="textarea"
+                        title="Please describe or tell us a little bit about your company."
+                        placeholder="Tell us more about your business and why chose LoneStar Chamber e-Commerce?"
+                        required></textarea>
 
                     <input type="hidden" id="timestamp" name="time">
-                    <input type="submit" aria-label="Submit" required>
+
+                    <input type="submit" aria-label="Submit Application" required>
                 </fieldset>
+            </form>
+
+
+            <section class="membership-container">
+
+                <!--open modals membership benefits -->
+                <div id="membership">
+                    <h2>Membership Levels</h2>
+                    <button type="submit">Non-profit Membership Level
+                        <span href="" id="membership-level1">Learn More</span>
+                    </button>
+                    <button type="submit">Bronze Membership Level
+                        <span href="" id="membership-level2">Learn More</span>
+                    </button>
+                    <button type="submit">Silver Membership Level
+                        <span href="" id="membership-level3">Learn More</span>
+                    </button>
+                    <button type="submit">Gold Membership Level
+                        <span href="" id="membership-level4">Learn More</span>
+                    </button>
+                    <!-- <button type="submit" id="membership-level2">Bronze Membership</button>
+                                    <button type="submit" id="membership-level3">Silver Membership</button>
+                                    <button type="submit" id="membership-level4">Gold Membership</button> -->
+                </div>
+            </section>
+            <section>
+                <!-- business cards  -->
+                <h2>Companies/Organizations</h2>
+
+                <section id="company-card"></section>
+
+                <!-- modals  -->
+                <dialog id="modalBox">
+                    <div></div>
+                    <button type="submit" id="closeModal">❌</button>
+                </dialog>
+
+
+            </section>
         </section>
-        </form>
+
+        </section>
+
     </main>
 
     <footer>
