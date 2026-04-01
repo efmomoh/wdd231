@@ -1248,10 +1248,10 @@ form input:required:valid {
     }
 }
 
-#membership-level1 p,
-#membership-level2 p,
-#membership-level3 p,
-#membership-level4 p {
+#membership-level1 .learn-more,
+#membership-level2 .learn-more,
+#membership-level3 .learn-more,
+#membership-level4 .learn-more {
     font-size: 1.2rem;
     padding: .5rem;
     color: var(--spotlight-a);
