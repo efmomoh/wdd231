@@ -99,17 +99,19 @@
 
                     <label for="phoneNumber">Mobile Phone Number:</label>
                     <input type="tel" name="phone" id="phoneNumber"
-                        title="Please enter your phone number (eg. 555-999-1111)" placeholder="555-555-5555" autocomplete="tel-national" required>
+                        title="Please enter your phone number (eg. 555-999-1111)" placeholder="555-555-5555"
+                        autocomplete="tel-national" required>
 
                     <label for="organization-title">Organization Title:</label>
-                    <input type="text" name="organization-title" id="organization-title" placeholder="eg. Program Manager"
+                    <input type="text" name="organization-title" id="organization-title"
+                        placeholder="eg. Program Manager"
                         title="Please enter your organizationaTitle (letters, spaces, hyphens only, min 7 characters. eg. MANAGER)"
                         autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" required>
 
                     <label for="businessName">Business/Organization's Name:</label>
                     <input type="text" name="business" id="businessName"
                         title="Please enter your business or organization's name (eg. TaurusProMax Inc.)"
-                       placeholder="TaurusPromax Inc."  autocomplete="organization" required>
+                        placeholder="TaurusPromax Inc." autocomplete="organization" required>
 
                     <label for="membershipLevel">Membership Level:</label>
                     <select name="level" id="membershipLevel" required>
@@ -128,7 +130,7 @@
 
                     <input type="hidden" id="timestamp" name="time">
 
-                    <input type="submit" aria-label="Submit Application" required>
+                    <input type="submit" aria-label="Submit Application">
                 </fieldset>
             </form>
 
@@ -139,16 +141,16 @@
                 <div id="membership">
                     <h2>Membership Levels</h2>
                     <button type="submit">Non-profit Membership Level
-                        <span href="" id="membership-level1">Learn More</span>
+                        <strong href="" id="membership-level1">Learn More</strong>
                     </button>
                     <button type="submit">Bronze Membership Level
-                        <span href="" id="membership-level2">Learn More</span>
+                        <strong href="" id="membership-level2">Learn More</strong>
                     </button>
                     <button type="submit">Silver Membership Level
-                        <span href="" id="membership-level3">Learn More</span>
+                        <strong href="" id="membership-level3">Learn More</strong>
                     </button>
                     <button type="submit">Gold Membership Level
-                        <span href="" id="membership-level4">Learn More</span>
+                        <strong href="" id="membership-level4">Learn More</strong>
                     </button>
                     <!-- <button type="submit" id="membership-level2">Bronze Membership</button>
                                     <button type="submit" id="membership-level3">Silver Membership</button>
@@ -159,7 +161,7 @@
                 <!-- business cards  -->
                 <h2>Companies/Organizations</h2>
 
-                <section id="company-card"></section>
+                <div id="company-card"></div>
 
                 <!-- modals  -->
                 <dialog id="modalBox">
@@ -171,20 +173,19 @@
             </section>
         </section>
 
-        </section>
 
     </main>
 
     <footer>
-        <section class="site-info">
+        <div class="site-info">
             <p><span id="year"></span></p>
-        </section>
+        </div>
         <section class="social-media">
             <a href="#"><img src="images/youtube-icon.svg" alt="YouTube Icon"></a>
             <a href="#"><img src="images/twitter_icon.svg" alt="Twitter Icon"></a>
             <a href="#"><img src="images/linkedin_icon.svg" alt="LinkedIn Icon"></a>
         </section>
-        <section class="site-project"></section>
+        <div class="site-project"></div>
     </footer>
 
 </body>
