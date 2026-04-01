@@ -1,15 +1,146 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
-    <head>
-        <link rel="stylesheet" href="styles/base.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="LoneStar Chamber e-Commerce connects Monrovia businesses through networking, events, and a local business directory to promote economic growth.">
+    <meta name="author" content="Enssah Fayia Momoh">
+    <meta property="og:title" content="LoneStar Chamber e-Commerce Directory">
+    <meta property="og:description"
+        content="Explore LoneStar Chamber's business directory and connect with innovators. Join events and classes to grow your Monrovia business.">
+    <meta property="og:url" content="https://efmomoh.github.io/wdd231/chamber/directory.html">
+    <meta property="og:image" content="https://efmomoh.github.io/wdd231/chamber/images/student-enssah.webp">
+    <meta property="og:image:alt" content="LoneStar e-Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LoneStar Chamber e-Commerce">
+
+    <title>Thankyou | Membership Application Form Submitted | LoneStar Chamber e-Commerce</title>
+
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- styles  -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU+Guides&family=Roboto:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
+</head>
 
 <body>
+    <header>
+        <div id="logo-container">
+            <a href="index.html" aria-label="Home">
+                <img src="images/logo.svg" alt="logo" width="48" height="48">
+                <div>
+                    <span class="site-name">LoneStar</span>
+                    <span class="site-tag">Chamber of e-Commerce</span>
+                </div>
+            </a>
+        </div>
+        <nav>
+            <ul id="primary-nav" class="navigation">
+                <li>
+                    <a class="active" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="directory.html">Directory</a>
+                </li>
+                <li>
+                    <a href="join.html">Join</a>
+                </li>
+                <li>
+                    <a href="discover.html">Discover
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-controls">
+
+            <img src="images/circle_half_full_icon.svg" alt="Dark mode toggle">
+
+            <button id="hamburger" aria-label="Menu"></button>
+        </div>
+    </header>
+
     <main class="main">
-        <h1>Thank you!</h1>
-        <p>Your application was received.</p>
+
+        <section class="thankyou-container">
+
+            <h1>🎉 Thank You For Joining LoneStar Chamber!</h1>
+
+            <p class="success-message">
+                Your membership application has been successfully submitted.
+                Below is the information you provided:
+            </p>
+
+            <section class="application-summary">
+
+                <h2>Application Details</h2>
+
+                <p><strong>First Name:</strong>
+                    <span id="firstName"></span>
+                </p>
+
+                <p><strong>Last Name:</strong>
+                    <span id="lastName"></span>
+                </p>
+
+                <p><strong>Email:</strong>
+                    <span id="email"></span>
+                </p>
+
+                <p><strong>Mobile Phone:</strong>
+                    <span id="phone"></span>
+                </p>
+                <p><strong>Organizational Title:</strong>
+                    <span id="title"></span>
+                </p>
+
+                <p><strong>Business Name:</strong>
+                    <span id="business"></span>
+                </p>
+                <p><strong>Membership Level:</strong>
+                    <span id="member-level"></span>
+                </p>
+                <p><strong>Message:</strong>
+                    <span id="message"></span>
+                </p>
+
+                <p><strong>Application Date:</strong>
+                    <span id="timestamp"></span>
+                </p>
+
+            </section>
+
+        </section>
+        <section id="back-forth">
+        <a href="join.html" class="back-btn">Back to Form</a>
+        <a href="directory.html" class="back-btn">Visit other Businesses</a>
+        </section>
     </main>
+
+    <footer>
+        <section class="site-info">
+            <p><span id="year"></span></p>
+        </section>
+        <section class="social-media">
+            <a href="#"><img src="images/youtube-icon.svg" alt="YouTube Icon"></a>
+            <a href="#"><img src="images/twitter_icon.svg" alt="Twitter Icon"></a>
+            <a href="#"><img src="images/linkedin_icon.svg" alt="LinkedIn Icon"></a>
+        </section>
+        <section class="site-project"></section>
+    </footer>
 
 </body>
 
