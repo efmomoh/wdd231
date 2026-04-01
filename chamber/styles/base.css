@@ -534,6 +534,16 @@ h2 {
     transition: .3s;
 }
 
+/* #membership button {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    width: 100%;
+    justify-content: center;
+    align-self: center;
+    font-size: 1.3rem;
+} */
+
 .menu button:hover {
     background: var(--nav-hover);
     color: var(--active-hover);
@@ -849,6 +859,14 @@ textarea {
     margin: 0 auto;
 }
 
+/* #membership {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+} */
+
 #modalBox {
     width: min(92%, 500px);
     max-width: 500px;
@@ -944,11 +962,6 @@ dialog#newsletter .modal-close,
     color: #1f426e;
     font-size: 1.1rem;
     cursor: pointer;
-}
-
-#modalBox .modal-content {
-    margin-top: 1.2rem;
-    color: #2a436f;
 }
 
 #modalBox h2,
@@ -1245,25 +1258,6 @@ form input:required:valid {
         opacity: 1;
         transform: scale(1) translateY(0);
     }
-}
-
-#membership {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-}
-
-
-#membership button {
-    display: flex;
-    flex-direction: column;
-    padding: .5rem;
-    width: 100%;
-    justify-content: center;
-    align-self: center;
-    font-size: 1.3rem;
 }
 
 #membership-level1,
