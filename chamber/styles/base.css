@@ -26,7 +26,7 @@ BASE CSS
     --form-focus: #3a7adf;
     --card-border: #dbe5f6;
     --modal-content: #293c64;
-   
+
 }
 
 /* =========================================
@@ -344,6 +344,8 @@ h2 {
     text-align: center;
     font-weight: bold;
     background-color: var(--h2);
+    font-size: 1rem;
+    padding: 0 10px;
 }
 
 /* =========================================
@@ -681,6 +683,7 @@ DISCOVER
     text-align: left;
 
 }
+
 #visitMessage {
     text-align: center;
     font-size: 1.2rem;
@@ -800,13 +803,14 @@ textarea {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    padding: 0.25rem;
+    padding: 2rem;
 }
 
 #company-card section {
     border: 1px solid var(--card-border);
     border-radius: 14px;
-    background: #ffffff;
+    background: var(--text-header);
+    max-width: 100%;
     padding: 0.95rem;
     box-shadow: 0 9px 22px rgba(15, 42, 87, 0.09);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -898,11 +902,10 @@ textarea {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
     font-size: 1.3rem;
     width: 100%;
     text-align: left;
-    border: 1px solid ;
+    border: 1px solid var(--form-focus);
     border-radius: 10px;
     background: #f1f7ff;
     color: var(--h2);
