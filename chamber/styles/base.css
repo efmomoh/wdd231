@@ -265,23 +265,25 @@ header img:hover {
 
 #hamburger::before {
     content: '\2630';
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     color: var(--nav-hover);
     font-size: 32px;
-    display: inline-block;
-    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #hamburger.open::before {
     content: '\2715';
-    width: 44px;
+    width: 48px;
     height: 44px;
     font-size: 28px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: 100%;
+    box-sizing: border-box;
     border: 2px solid var(--nav-hover);
 }
 
