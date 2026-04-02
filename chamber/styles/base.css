@@ -1256,9 +1256,19 @@ form input:required:valid {
 #membership-level4 .learn-more {
     font-size: 1.2rem;
     padding: .5rem;
+    border-radius: 10px;
     color: var(--spotlight-a);
     background-color: var(--text-header);
     text-decoration: underline;
+    cursor: pointer;
+}
+
+#membership-level1 .learn-more:hover,
+#membership-level2 .learn-more:hover,
+#membership-level3 .learn-more:hover,
+#membership-level4 .learn-more:hover {
+    color: var(--h2);
+    background-color: var(--nav-hover);
     cursor: pointer;
 }
 
