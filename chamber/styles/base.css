@@ -263,13 +263,13 @@ header img:hover {
 }
 
 #hamburger::before {
-    content: url('../images/menu.svg');
+    content: url('images/menu.svg');
     width: 44px;
     height: 44px;
 }
 
 #hamburger.open::before {
-    content: url('../images/x-circle.svg');
+    content: url('images/x-circle.svg');
     width: 44px;
     height: 44px;
 }
