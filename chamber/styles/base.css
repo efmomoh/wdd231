@@ -803,7 +803,6 @@ textarea {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    padding: 2rem;
 }
 
 #company-card section {
