@@ -260,18 +260,29 @@ header img:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 #hamburger::before {
-    content: url("images/menu.svg");
-    width: 44px;
-    height: 44px;
+    content: '\2630';
+    width: 40px;
+    height: 40px;
+    color: var(--nav-hover);
+    font-size: 32px;
+    display: inline-block;
+    text-align: center;
 }
 
 #hamburger.open::before {
-    content: url("images/x-circle.svg");
+    content: '\2715';
     width: 44px;
     height: 44px;
+    font-size: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid var(--nav-hover);
 }
 
 /* =========================================
