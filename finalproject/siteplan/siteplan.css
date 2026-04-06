@@ -47,6 +47,15 @@ ul > li {
     font-weight: bold;
 }
 
+img {
+    display: block;
+   margin: 2rem auto;
+   width:100%;
+   height: auto;
+   
+   
+}
+
 footer {
     text-align: center;
     padding: 1.2rem;
