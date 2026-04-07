@@ -238,11 +238,13 @@ header img:hover {
 .navigation a.active {
     background: var(--nav-hover);
     color: var(--active-hover);
+    text-decoration: underline;
 }
 
 .navigation a.active:hover {
     background: var(--bg-active-hover);
     color: var(--text-header);
+    text-decoration: underline;
 }
 
 .navigation a:hover::after {
@@ -688,7 +690,80 @@ h4 {
 DISCOVER
 ============================================ */
 .main {
-    margin: 10rem auto;
+    margin: 0 auto;
+}
+
+#discover {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+.discover-card {
+    background-color: var(--text-header);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.discover-card:hover img {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
+
+.discover-card h2 {
+    font-size: 1.2rem;
+}
+
+.discover-card figure {
+    margin: 0;
+}
+
+.discover-card img {
+    width: 100%;
+    height: 200px;
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.discover-card address,
+.discover-card p {
+    margin: 0.5rem;
+}
+
+.discover-card address strong,
+.discover-card p strong {
+    color: var(--spotlight-a);
+    font-weight: bold;
+    margin-right: 0.3rem;
+    text-transform: uppercase;
+}
+
+.discover-card button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--bg-header);
+    color: var(--text-header);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.discover-card button:hover {
+    background-color: var(--nav-hover);
+    color: var(--h2);
 }
 
 #visitMessage,
@@ -700,6 +775,58 @@ DISCOVER
 #visitMessage {
     text-align: center;
     font-size: 1.2rem;
+    background-color: var(--bg-header);
+    color: var(--text-header);
+    font-weight: bold;
+    padding: .5rem;
+}
+
+/* Services heading */
+#modalContent h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #222;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.3rem;
+}
+
+/* Services list styling */
+#modalContent ul {
+    list-style: none;
+    /* remove default bullets */
+    padding-left: 0;
+    margin: 0.5rem 0 1rem 0;
+}
+
+/* Each service item */
+#modalContent ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: #444;
+    transition: color 0.2s ease;
+}
+
+/* Add custom icon (small circle) */
+#modalContent ul li::before {
+    content: "✔";
+    /* can change to •, ✓, ➤ etc. */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #28a745;
+    /* green checkmark */
+    font-size: 1rem;
+}
+
+/* Hover effect for each service */
+#modalContent ul li:hover {
+    color: #000;
+}
+
+dialog[open]::backdrop {
+    background-color: rgba(0, 195, 255, 0.4);
 }
 
 /* ===========================================
@@ -1095,7 +1222,8 @@ form input:required:valid {
 /* MODAL  */
 #signUp,
 .modal,
-#modalBox {
+#modalBox,
+#discoverModalBox {
     margin: auto;
     width: 70%;
     max-width: 400px;
