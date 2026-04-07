@@ -809,15 +809,12 @@ DISCOVER
     padding-bottom: 0.3rem;
 }
 
-/* Services list styling */
 #modalContent ul {
     list-style: none;
-    /* remove default bullets */
     padding-left: 0;
     margin: 0.5rem 0 1rem 0;
 }
 
-/* Each service item */
 #modalContent ul li {
     position: relative;
     padding-left: 25px;
@@ -827,19 +824,15 @@ DISCOVER
     transition: color 0.2s ease;
 }
 
-/* Add custom icon (small circle) */
 #modalContent ul li::before {
     content: "✔";
-    /* can change to •, ✓, ➤ etc. */
     position: absolute;
     left: 0;
     top: 0;
     color: #28a745;
-    /* green checkmark */
     font-size: 1rem;
 }
 
-/* Hover effect for each service */
 #modalContent ul li:hover {
     color: #000;
 }
