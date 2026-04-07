@@ -37,7 +37,7 @@
         rel="stylesheet">
 
     <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/discover.js" defer></script>
+    <script type="module" src="scripts/discover.js"></script>
     <script src="scripts/footer.js" defer></script>
 
 </head>
@@ -54,10 +54,10 @@
                 </div>
             </a>
         </div>
-        <nav>
+        <nav aria-label="Primary site navigation">
             <ul id="primary-nav" class="navigation">
                 <li>
-                    <a class="active" href="index.html">Home</a>
+                    <a href="index.html">Home</a>
                 </li>
                 <li>
                     <a href="directory.html">Directory</a>
@@ -66,7 +66,7 @@
                     <a href="join.html">Join</a>
                 </li>
                 <li>
-                    <a href="discover.html">Discover</a>
+                    <a class="active" href="discover.html">Discover</a>
 
                 </li>
             </ul>
@@ -82,9 +82,14 @@
 
     <main class="main">
         <h1>Discover</h1>
-        <p id="visitMessage">
+        <p id="visitMessage"></p>
+        
+        <section id="discover"></section>
 
-        </p>
+        <dialog id="discoverModalBox">
+            <button id="closeModal">❌</button>
+            <div id="modalContent"></div>
+        </dialog>
     </main>
 
     <footer>
