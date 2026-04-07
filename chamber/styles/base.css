@@ -707,12 +707,25 @@ DISCOVER
         "card8";
 }
 
+
 .discover-card {
     background-color: var(--text-header);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
     transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    gap: 1rem;
+
+    display: grid;
+    grid-template-areas:
+        "name"
+        "photo"
+        "address"
+        "description"
+        "button"
+    ;
+
 }
 
 .discover-card:hover img {
@@ -722,10 +735,12 @@ DISCOVER
 
 .discover-card h2 {
     font-size: 1.2rem;
+    grid-area: name;
 }
 
 .discover-card figure {
     margin: 0;
+    grid-area: photo;
 }
 
 .discover-card img {
@@ -737,9 +752,14 @@ DISCOVER
     transition: transform 0.3s, filter 0.3s;
 }
 
-.discover-card address,
+.discover-card address {
+    grid-area: address;
+    margin: 0.5rem;
+}
+
 .discover-card p {
     margin: 0.5rem;
+    grid-area: description;
 }
 
 .discover-card address strong,
@@ -758,6 +778,7 @@ DISCOVER
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    grid-area: button;
 }
 
 .discover-card button:hover {
