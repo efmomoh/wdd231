@@ -238,7 +238,6 @@ header img:hover {
 .navigation a.active {
     background: var(--nav-hover);
     color: var(--active-hover);
-    text-decoration: underline;
 }
 
 .navigation a.active:hover {
