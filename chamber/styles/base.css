@@ -1091,7 +1091,7 @@ dialog#newsletter,
     box-shadow: 0 20px 40px rgba(14, 40, 84, 0.24);
     padding: 1.2rem;
     width: min(92%, 560px);
-    position: relative;
+    position: fixed;
 }
 
 #modalBox::backdrop,
