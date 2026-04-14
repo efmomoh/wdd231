@@ -1,0 +1,85 @@
+/* larger CSS */
+/* =========================
+   MOBILE FIX
+========================= */
+@media (max-width: 600px) {
+
+    .modal-content {
+        width: 92%;
+        min-width: unset;
+        max-height: 75vh;
+        padding: 12px;
+    }
+}
+
+
+@media (min-width: 600px) {
+
+    header {
+        grid-template-columns: 48px auto auto;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+    }
+
+    .navigation ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    /* modal buttons  */
+    .modal-content button {
+        padding: 4px 6px;
+    }
+
+    footer {
+        display: flex;
+        gap: 1rem;
+        justify-content: space-around;
+    }
+
+    #social-media {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .8rem;
+    }
+
+}
+
+/* medium screen  */
+@media screen and (min-width: 601px) {
+
+
+    .movie-card {
+        grid-template-areas:
+            "image title"
+            "image details"
+            "image actions"
+        ;
+    }
+
+    .movie-card img {
+        width: 200px;
+        object-fit: cover;
+    }
+}
+
+/* large screens  */
+@media screen and (min-width: 1024px) {
+    #movies {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .movie-card img {
+        width: 200px;
+        height: auto;
+        object-fit: cover;
+    }
+}
