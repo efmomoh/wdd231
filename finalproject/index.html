@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | TaurusProMax Movies</title>
+    <title>Home | TaurusProMax Movies Hub</title>
 
-    <meta name="description" content="Welcome to TaurusProMax movie trailer music where movies of all kinds 
+    <meta name="description" content="Welcome to TaurusProMax movie trailer where movies of all kinds 
     are available for your leisure time">
     <meta name="author" content="Enssah Fayia Momoh">
 
@@ -40,18 +40,72 @@
     <link rel="stylesheet" href="styles/larger.css">
 
     <!-- scripts  -->
-    <script src="scripts/index.js" defer></script>
-
+    <script type="module" src="scripts/app.js"></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
     <!-- favorite icon  -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
 </head>
 
 <body>
+    <header>
+        <img src="images/logo.webp" alt="Logo Icon Placeholder">
+        <a href="#">TaurusProMax</a>
+        <!-- <form action="">
+            <label for="show">
+                <input type="search" name="search" id="show"> X
+
+            </label>
+        </form> -->
+        <button id="menu" aria-label="Home menu"></button>
+    </header>
+    <nav id="nav-bar" class="navigation" aria-label="navigation site">
+        <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="movies.html">Movies Hub</a></li>
+            <li><a href="genres.html">Genres</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <h1>TEST</h1>
+        <h1>Welcome! This is TaurusProMax Global Movie Hub</h1>
+
+        <section id="hero">
+            <h2>Trending Movies</h2>
+            <div class="hero-track"></div>
+            <div class="hero-dots"></div>
+        </section>
+        <div id="movies"></div>
+
+        <!-- <section id="movies" class="grid"></section> -->
+        <button id="toggleBtn">See More</button>
+
     </main>
 
+    <!-- MODAL -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <button id="closeModal">X</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p id="year">
+        </p>
+
+        <div id="social-media">
+            <a href=""><img src="images/facebook.svg" alt=""></a>
+            <a href=""><img src="images/instagram.svg" alt=""></a>
+            <a href=""><img src="images/youtube.svg" alt=""></a>
+            <a href=""><img src="images/tiktok.svg" alt=""></a>
+            <a href=""><img src="images/twitter.svg" alt=""></a>
+            <a href=""><img src="images/github.svg" alt="GitHub Icon"></a>
+        </div>
+        <p id="modifiedDate">
+        </p>
+    </footer>
 </body>
 
 </html>
