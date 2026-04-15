@@ -63,32 +63,35 @@
     </nav>
 
     <main>
-        <input type="text" id="searchInput" placeholder="Search movies...">
+        <label for="searchInput">Search
+            <input type="search" name="search" id="searchInput" placeholder="Search movies...">
+
+        </label>
 
         <div id="genres"></div>
         <div id="movies"></div>
 
         <button id="toggleBtn">See More</button>
 
+        <div id="modal" class="modal hidden">
+            <div class="modal-content">
+                <button id="closeModal">X</button>
+                <div id="modal-body"></div>
+            </div>
+        </div>
     </main>
 
-    <div id="modal" class="modal hidden">
-        <div class="modal-content">
-            <button id="closeModal">X</button>
-            <div id="modal-body"></div>
-        </div>
-    </div>
 
     <footer>
         <p id="year">
         </p>
 
         <div id="social-media">
-            <a href=""><img src="images/facebook.svg" alt=""></a>
-            <a href=""><img src="images/instagram.svg" alt=""></a>
-            <a href=""><img src="images/youtube.svg" alt=""></a>
-            <a href=""><img src="images/tiktok.svg" alt=""></a>
-            <a href=""><img src="images/twitter.svg" alt=""></a>
+            <a href=""><img src="images/facebook.svg" alt="Facebook Icon"></a>
+            <a href=""><img src="images/instagram.svg" alt="Instagram Icon"></a>
+            <a href=""><img src="images/youtube.svg" alt="Youtube Icon"></a>
+            <a href=""><img src="images/tiktok.svg" alt="TikTok Icon"></a>
+            <a href=""><img src="images/twitter.svg" alt="Twitter Icon"></a>
             <a href=""><img src="images/github.svg" alt="GitHub Icon"></a>
         </div>
         <p id="modifiedDate">

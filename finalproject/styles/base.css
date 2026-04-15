@@ -144,6 +144,9 @@ header img {
     border-style: none;
     border: none;
     border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
 }
 
 header a {
@@ -207,7 +210,7 @@ header a {
 }
 
 .navigation ul li a:hover {
-    border-bottom: 4px solid var(--color-red);
+    border-bottom: 2px solid var(--color-red);
 }
 
 /* ===================
@@ -215,6 +218,7 @@ MAIN body========== */
 main {
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 h1,
@@ -310,7 +314,7 @@ MOVIE CARD
 .movie-card .details .overview {
     grid-area: desc;
     font-size: 1rem;
-    font-weight: normal;
+    color: var(--color-dark);
 }
 
 .movie-card .details .popularity {
@@ -334,7 +338,7 @@ MOVIE CARD
 }
 
 .movie-card strong {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 /* =========================
@@ -464,27 +468,32 @@ MOVIE CARD
     margin: .3rem 0 1rem 2rem;
     padding: .3rem;
     font-size: .8rem;
-    color: var(--color-white);
-    background-color: var(--color-orange);
+    color: var(--btn-primary-text);
+    background-color: var(--color-green-dark);
     border-radius: 10px;
     cursor: pointer;
 }
 
 #toggleBtn:hover {
-    background-color: var(--btn-primary-hover);
+    background: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
 }
 
 /* search bar  */
 #searchInput {
-    margin: 1rem 0 auto 0;
-    width: 100%;
+    margin: 1rem auto 0;
+    width: 40%;
     max-width: 100%;
-    border: 3px solid var(--color-orange);
-    padding: .3rem;
+    border: 1px solid var(--color-orange);
+    padding: .4rem;
     border-radius: 8px;
-    font-size: .9rem;
+    font-size: .8rem;
 }
 
+label {
+    font-weight: bold;
+    color: var(--color-dark);
+}
 
 /* HERO-SLIDE  */
 #hero {
@@ -516,15 +525,6 @@ MOVIE CARD
     border-radius: 10px 10px 0 0;
 }
 
-.hero-content {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: white;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 10px;
-    border-radius: 8px;
-}
 
 .hero-content h2 {
     color: var(--color-white);
@@ -534,8 +534,9 @@ MOVIE CARD
 .hero-content {
     position: absolute;
     bottom: 20px;
-    left: 20px;
-    color: white;
+    left: 25px;
+    right: 25px;
+    color: var(--color-white);
     background: rgba(0, 0, 0, 0.4);
     padding: 12px;
     border-radius: 8px;
@@ -560,13 +561,121 @@ MOVIE CARD
 }
 
 .dot.active {
-    background: white;
+    background: var(--color-white);
+}
+
+/* ==========================
+FORM 
+========================== */
+
+form {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 350px;
+}
+
+fieldset {
+    font-weight: bold;
+    font-style: italic;
+    font-size: .95rem;
+    color: var(--color-dark);
+}
+
+form label,
+#send-btn {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding-bottom: .3rem;
+    font-size: .8rem;
+    color: var(--color-dark);
+}
+
+form input {
+    padding: .5rem;
+    border-radius: 5px;
+}
+
+form input:focus {
+    color: blue;
+}
+
+form input:required {
+    border-left: 3px solid red;
+    border: 1px solid var(--color-dark);
+}
+
+form input:valid {
+    border-bottom: 3px solid green;
+}
+
+form input,
+form textarea,
+#form #send-btn {
+    width: 100%;
+    max-width: 300px;
+}
+
+form textarea {
+    padding: .5rem;
+    font-size: .6rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+form #send-btn {
+    border: none;
+    background-color: var(--color-green-dark);
+    color: var(--btn-primary-text);
+    cursor: pointer;
+    padding: .5rem;
+    font-size: 1.2rem;
+}
+
+form #send-btn:hover {
+    color: var(--btn-primary-text);
+    background: var(--btn-primary-bg);
+}
+
+/* =========THANKYOU FORM ======== */
+#summary {
+    margin: 1rem auto;
+    background-color: var(--color-beige);
+    padding: .5rem;
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px 2px goldenrod;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#summary h1 {
+    text-align: center;
+    font-size: .9rem;
+    font-weight: bold;
+    color: green;
+}
+
+#summary .desc {
+    text-align: start;
+    color: var(--color-dark);
+    border-bottom: 1.5px solid maroon;
+    font-size: .9rem;
+}
+
+#summary p {
+    font-size: .7rem;
+    padding-top: .195rem;
+}
+
+#summary .summary-details {
+    padding-top: .5rem;
 }
 
 
-/* ================
-FOOTER STYLES 
-================ */
+/* ============ FOOTER STYLES ========= */
 footer {
     background: var(--footer-bg);
     bottom: 0;

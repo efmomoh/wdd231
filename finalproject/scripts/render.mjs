@@ -31,7 +31,7 @@ export function renderMovies(movies) {
             <p class="overview"><strong>Description:</strong> ${truncateText(movie.overview)}</p>
             <p class="popularity"><strong> Popularity:</strong> ${movie.popularity}</p>
             <p class="release_date"><strong> Release Date:</strong> ${movie.release_date}</p>
-            <p class="vote"><strong> Vote Average:</strong> ${movie.vote_average}</p>
+            <p class="vote"><strong> Vote Average:</strong> ⭐ ${movie.vote_average}</p>
             <p class="count"><strong> Vote Count:</strong> ${movie.vote_count}</p>
         </div>
 
@@ -47,7 +47,6 @@ export function renderMovies(movies) {
         // OPEN MODAL
         card.querySelector("img").addEventListener('click', () => {
             openModal(movie);
-
         });
 
         // FAVORITES
@@ -60,7 +59,7 @@ export function renderMovies(movies) {
     });
 }
 
-/* 🔥 LIVE UPDATE FUNCTION */
+/* LIVE UPDATE FUNCTION */
 export function updateCardStats(movieId) {
 
     const stats = getStats(movieId);

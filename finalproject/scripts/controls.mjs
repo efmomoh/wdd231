@@ -12,7 +12,7 @@ export function initControls(data, render) {
     expanded = JSON.parse(localStorage.getItem("expanded")) || false;
 
     // initial render
-    render(expanded ? fullData : fullData.slice(0, 2));
+    render(expanded ? fullData : fullData.slice(0, 15));
     btn.textContent = expanded ? "Show Less" : "Show More";
 
     btn.addEventListener("click", () => {

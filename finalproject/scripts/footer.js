@@ -1,5 +1,4 @@
 // FOOTER JS
-
 const year = document.querySelector('#year');
 const dateModified = document.querySelector('#modifiedDate');
 

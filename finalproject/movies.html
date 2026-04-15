@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="styles/larger.css">
 
     <!-- scripts  -->
-    <script type="module" src="scripts/app.js" defer></script>
+    <script type="module" src="scripts/app.js"></script>
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/footer.js" defer></script>
     <!-- favorite icon  -->
@@ -63,33 +63,60 @@
     </nav>
 
     <main>
-        <input type="text" id="searchInput" placeholder="Search movies...">
+        <label for="searchInput">Search
+            <input type="search" name="search" id="searchInput" placeholder="Search movies...">
+        </label>
 
         <div id="movies">
-            
+
         </div>
 
         <button id="toggleBtn">See More</button>
 
+        <form action="thankyou.html" method="get">
+            <fieldset>
+                <legend>Tell Us About Your Experience</legend>
+                <label for="given-name">First Name: </label>
+                <input type="text" name="first-name" id="given-name" title="Please enter your given name eg: Paul"
+                    placeholder="Enssah" autocomplete="given-name" required>
+
+                <label for="family-name">Last Name: </label>
+                <input type="text" name="last-name" id="family-name" title="Enter your faamily name eg: Cheney"
+                    placeholder="Momoh" autocomplete="family-name" required>
+
+                <label for="usermail">Email: </label>
+                <input type="email" name="email" id="usermail" title="Enter your email eg: youremail@mail.com"
+                    placeholder="efmomoh25@gmail.com" autocomplete="email" required>
+
+                <label for="message">Any Opinion? (Optional) </label>
+                <textarea name="message" id="message" rows="3"
+                    placeholder="Please tell us more about your interest..."></textarea>
+
+                <input type="hidden" name="time" id="timestamp">
+                <input id="send-btn" type="submit" value="Send">
+            </fieldset>
+        </form>
+
+        <div id="modal" class="modal hidden">
+            <div class="modal-content">
+                <button id="closeModal">X</button>
+                <div id="modal-body"></div>
+            </div>
+        </div>
     </main>
 
-    <div id="modal" class="modal hidden">
-        <div class="modal-content">
-            <button id="closeModal">X</button>
-            <div id="modal-body"></div>
-        </div>
-    </div>
+
 
     <footer>
         <p id="year">
         </p>
 
         <div id="social-media">
-            <a href=""><img src="images/facebook.svg" alt=""></a>
-            <a href=""><img src="images/instagram.svg" alt=""></a>
-            <a href=""><img src="images/youtube.svg" alt=""></a>
-            <a href=""><img src="images/tiktok.svg" alt=""></a>
-            <a href=""><img src="images/twitter.svg" alt=""></a>
+            <a href=""><img src="images/facebook.svg" alt="Facebook Icon"></a>
+            <a href=""><img src="images/instagram.svg" alt="Instagram Icon"></a>
+            <a href=""><img src="images/youtube.svg" alt="Youtube Icon"></a>
+            <a href=""><img src="images/tiktok.svg" alt="TikTok Icon"></a>
+            <a href=""><img src="images/twitter.svg" alt="Twitter Icon"></a>
             <a href=""><img src="images/github.svg" alt="GitHub Icon"></a>
         </div>
         <p id="modifiedDate">
