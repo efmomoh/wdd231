@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission | TaurusProMax Movies Hub</title>
+
+    <meta name="description" content="Welcome to TaurusProMax movie trailer experience page of all sorts of movie">
+    <meta name="author" content="Enssah Fayia Momoh">
+
+    <!-- social media meta tags (facebook) -->
+    <meta property="og:title" content="TaurusProMax Movies">
+    <meta property="og:description"
+        content="Welcome! TaurusProMax is a free movie website where you can have all the trending movies around the world from your disposal.">
+    <meta property="og:url" content="https://efmomoh.github.io/wdd231/finalproject/movies.html">
+    <meta property="og:image" content="https://efmomoh.github.io/wdd231/chamber/images/student-enssah.webp">
+    <meta property="og:image:alt" content="This is TaurusProMax Image">
+    <meta property="og:site_name" content="TaurusProMax Movies">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+
+    <!-- social media meta tags (twitter) -->
+    <meta name="twitter:url" content="https://efmomoh.github.io/wdd231/finalproject/movies.html">
+    <meta name="twitter:title" content="TaurusProMax Movies Hub">
+    <meta name="twitter:description"
+        content="Welcome! TaurusProMax is a free movie website where you can have all the trending movies around the world at your disposal.">
+    <meta name="twitter:card" content="summary">
+
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU+Guides&family=Roboto:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- scripts  -->
+     <script src="scripts/thankyou.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
+    <!-- favorite icon  -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.webp" alt="Logo Icon Placeholder">
+        <a href="#">TaurusProMax</a>
+        <button id="menu" aria-label="Home menu"></button>
+    </header>
+    <nav id="nav-bar" class="navigation" aria-label="navigation site">
+        <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="movies.html">Movies Hub</a></li>
+            <li><a href="genres.html">Genres</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="summary">
+            <h1>Thank You For Sharing Your Thoughts With Us!</h1>
+            <p class="desc">Your thoughts have been received. We appreciate your efforts to share your Xperience with us.</p>
+
+            <section class="summary-details">
+                <p><strong>First Name: </strong><span id="first-name"></span></p>
+                <p><strong>Last Name: </strong><span id="family-name"></span></p>
+                <p><strong>Email: </strong><span id="usermail"></span></p>
+                <p><strong>Message: </strong><span id="message"></span></p>
+                <p><strong>Timestamp: </strong><span id="timestamp"></span></p>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p id="year">
+        </p>
+
+        <div id="social-media">
+            <a href=""><img src="images/facebook.svg" alt="Facebook Icon"></a>
+            <a href=""><img src="images/instagram.svg" alt="Instagram Icon"></a>
+            <a href=""><img src="images/youtube.svg" alt="Youtube Icon"></a>
+            <a href=""><img src="images/tiktok.svg" alt="TikTok Icon"></a>
+            <a href=""><img src="images/twitter.svg" alt="Twitter Icon"></a>
+            <a href=""><img src="images/github.svg" alt="GitHub Icon"></a>
+        </div>
+        <p id="modifiedDate">
+        </p>
+    </footer>
+</body>
+
+</html>
