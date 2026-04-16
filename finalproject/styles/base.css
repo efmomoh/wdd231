@@ -761,3 +761,18 @@ footer {
 #social-media a:hover {
     transform: scale(1.1);
 }
+
+/* video presentation  */
+.present {
+    text-align: center;
+}
+.present a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.present a:hover {
+    color: var(--color-white);
+    color: blue;
+}
