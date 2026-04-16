@@ -336,10 +336,6 @@ MOVIE CARD
     letter-spacing: .1rem;
 }
 
-.movie-card .details {
-    grid-area: details;
-}
-
 .movie-card .actions {
     grid-area: actions;
     padding: 0 .2rem .5rem .2rem;
@@ -773,6 +769,5 @@ footer {
 }
 
 .present a:hover {
-    color: var(--color-white);
     color: blue;
 }
