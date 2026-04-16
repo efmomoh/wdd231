@@ -1,3 +1,5 @@
+import { openModal } from "./modal.mjs";
+
 let currentIndex = 0;
 let movieList = [];
 let intervalId = null;
@@ -13,23 +15,47 @@ export function initHeroSlider(movies) {
     if (!track || !dotsContainer) return;
 
     // build slides
-    track.innerHTML = movieList.map(movie => `
-        <div class="hero-slide">
-            <img src="https://image.tmdb.org/t/p/original${movie.backdrop_path}" 
-                 alt="${movie.title}">
-            <div class="hero-content">
-                <h2>${movie.title}</h2>
-                <p>${truncateText(movie.overview, 120)}</p>
-            </div>
-        </div>
-    `).join("");
+    track.innerHTML = movieList.map((movie, index) => `
+    <div class="hero-slide" data-index="${index}">
+      
+      <img 
+        src="https://image.tmdb.org/t/p/w185${movie.backdrop_path}"
+        srcset="
+          https://image.tmdb.org/t/p/w185${movie.backdrop_path} 185w,
+          https://image.tmdb.org/t/p/w342${movie.backdrop_path} 342w,
+          https://image.tmdb.org/t/p/w500${movie.backdrop_path} 500w
+        "
+        sizes="(max-width: 600px) 150px, (max-width: 1024px) 200px, 300px"
+        width="185"
+        height="278"
+        loading="lazy"
+        alt="${movie.title}"
+      >
+
+      <div class="hero-content">
+        <h2>${movie.title}</h2>
+        <p>${truncateText(movie.overview, 120)}</p>
+      </div>
+
+    </div>
+  `).join("");
+
+    // make slides clickable
+    const slides = track.querySelectorAll(".hero-slide");
+
+    slides.forEach((slide) => {
+        slide.addEventListener("click", () => {
+            const index = Number(slide.dataset.index);
+            openModal(movieList[index]);
+        });
+    });
 
     // build dots
     dotsContainer.innerHTML = movieList.map((_, i) => `
-        <span class="dot ${i === 0 ? "active" : ""}" data-index="${i}"></span>
-    `).join("");
+    <span class="dot ${i === 0 ? "active" : ""}" data-index="${i}"></span>
+  `).join("");
 
-    setupDots(track);
+    setupDots(track, dotsContainer);
     startSlider(track, dotsContainer);
     setupPause(track);
 }
@@ -58,15 +84,15 @@ function updateDots(dotsContainer) {
     });
 }
 
-function setupDots(track) {
-    const dots = document.querySelectorAll(".dot");
+function setupDots(track, dotsContainer) {
+    const dots = dotsContainer.querySelectorAll(".dot");
 
     dots.forEach(dot => {
         dot.addEventListener("click", () => {
             currentIndex = Number(dot.dataset.index);
             track.style.transform = `translateX(-${currentIndex * 100}%)`;
 
-            updateDots(document.querySelector(".hero-dots"));
+            updateDots(dotsContainer);
         });
     });
 }
@@ -75,7 +101,9 @@ function setupPause(track) {
     const hero = document.querySelector("#hero");
 
     hero.addEventListener("mouseenter", stopSlider);
-    hero.addEventListener("mouseleave", () => startSlider(track, document.querySelector(".hero-dots")));
+    hero.addEventListener("mouseleave", () =>
+        startSlider(track, document.querySelector(".hero-dots"))
+    );
 }
 
 function stopSlider() {
@@ -84,5 +112,7 @@ function stopSlider() {
 
 function truncateText(text, maxLength = 120) {
     if (!text) return "";
-    return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
+    return text.length > maxLength
+        ? text.slice(0, maxLength) + "..."
+        : text;
 }

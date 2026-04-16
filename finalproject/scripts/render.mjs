@@ -23,8 +23,18 @@ export function renderMovies(movies) {
         card.dataset.id = movie.id;
 
         card.innerHTML = `
-        <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" 
-             alt="${movie.title}" loading="lazy">
+        <img src="https://image.tmdb.org/t/p/w185${movie.poster_path}"
+            srcset="
+                https://image.tmdb.org/t/p/w185${movie.poster_path} 185w,
+                https://image.tmdb.org/t/p/w342${movie.poster_path} 342w,
+                https://image.tmdb.org/t/p/w500${movie.poster_path} 500w
+            "
+            sizes="(max-width: 600px) 150px, (max-width: 1024px) 200px, 300px"
+            width="185"
+            height="278"
+            loading="lazy"
+            alt="${movie.title}"
+            >
 
         <p class="title"><strong>Title:</strong> ${movie.title}</p>
         <div class="details">

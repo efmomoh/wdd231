@@ -30,7 +30,19 @@ export async function loadGenres() {
                 div.className = "movie-card";
 
                 div.innerHTML = `
-                    <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}">
+                    <img
+                    src="https://image.tmdb.org/t/p/w185${movie.poster_path}"
+                    srcset="
+                        https://image.tmdb.org/t/p/w185${movie.poster_path} 185w,
+                        https://image.tmdb.org/t/p/w342${movie.poster_path} 342w,
+                        https://image.tmdb.org/t/p/w500${movie.poster_path} 500w
+                    "
+                    sizes="(max-width: 600px) 150px, (max-width: 1024px) 200px, 300px"
+                    width="185"
+                    height="278"
+                    loading="lazy"
+                    alt="${movie.title}"
+                    >
                     <h3>${movie.title}</h3>
                 `;
 
